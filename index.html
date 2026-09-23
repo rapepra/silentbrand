@@ -17,7 +17,7 @@
     <!-- Pure Haute-Couture Vanilla CSS -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Optimized Vanilla JS Core Engine -->
+    <!-- Optimized Vanilla JS Core Engine (with Multilingual i18n) -->
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -28,15 +28,26 @@
     <header class="nav-header">
       <button class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-cursor="SILENT">
         <span class="brand-title">SILENT</span>
-        <span class="brand-sub">DISAPPEARANCE ARCHIVE</span>
+        <span class="brand-sub" data-i18n="nav.sub">DISAPPEARANCE ARCHIVE</span>
       </button>
 
       <div class="nav-center-issue">
         <span class="ping-dot"></span>
-        <span>ISSUE 001 — VOID &amp; MATTER</span>
+        <span data-i18n="nav.issue">ISSUE 001 — VOID &amp; MATTER</span>
       </div>
 
       <div class="nav-actions">
+        <!-- Minimal Language Switcher -->
+        <div class="lang-switcher" title="Select Language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-divider">·</span>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <span class="lang-divider">·</span>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <span class="lang-divider">·</span>
+          <button class="lang-btn" data-lang="ja">JA</button>
+        </div>
+
         <!-- Ambient Sound Toggle -->
         <button id="sound-trigger" class="sound-trigger" data-cursor="AUDIO" title="Atmospheric Drone Sound">
           <span class="sound-bars">
@@ -44,12 +55,12 @@
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
           </span>
-          <span id="sound-label">AUDIO [OFF]</span>
+          <span id="sound-label" data-i18n="nav.audioOff">AUDIO [OFF]</span>
         </button>
 
         <!-- Private Drawer Trigger -->
         <button id="drawer-trigger" class="drawer-trigger" data-cursor="DRAWER">
-          <span>DRAWER</span>
+          <span data-i18n="nav.drawer">DRAWER</span>
           <span id="drawer-count" class="drawer-badge">0</span>
         </button>
       </div>
@@ -58,42 +69,42 @@
     <!-- 1. Hero Cover / The Veil -->
     <section class="hero-section">
       <div class="hero-bg">
-        <img src="assets/editorial/silent_hero_cover.jpg" alt="SILENT Issue 001 Cover" />
+        <img src="assets/editorial/silent_hero_cover.jpg" alt="SILENT Issue 001 Cover" fetchpriority="high" />
         <div class="hero-overlay"></div>
       </div>
 
       <div class="section-container hero-content">
         <div class="hero-top-meta">
           <div>
-            <span>VOL. 01 / ARCHIVE MANIFEST</span>
-            <span style="margin: 0 1rem; opacity: 0.3;">|</span>
-            <span style="color: var(--color-bone);">THE LUXURY OF DISAPPEARANCE</span>
+            <span data-i18n="hero.vol">VOL. 01 / ARCHIVE MANIFEST</span>
+            <span style="margin: 0 0.8rem; opacity: 0.3;">|</span>
+            <span style="color: var(--color-bone);" data-i18n="hero.motto">THE LUXURY OF DISAPPEARANCE</span>
           </div>
           <div>
-            <span>48.8566° N, 2.3522° E</span>
+            <span data-i18n="hero.coords">48.8566° N, 2.3522° E</span>
           </div>
         </div>
 
         <div class="hero-center">
           <h1 class="hero-title">SILENT</h1>
-          <p class="hero-quote">"We do not design garments to be seen. We construct armor to vanish."</p>
-          <p class="hero-subtag">ISSUE 001 — VOID &amp; MATTER</p>
+          <p class="hero-quote" data-i18n="hero.quote">“We do not design garments to be seen. We construct armor to vanish.”</p>
+          <p class="hero-subtag" data-i18n="hero.issue">ISSUE 001 — VOID &amp; MATTER</p>
         </div>
 
         <div class="hero-bottom-meta">
           <div>
-            <div>FABRICATED IN JAPAN &amp; ITALY</div>
-            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;">RESTRICTED ALLOCATION</div>
+            <div data-i18n="hero.origin">FABRICATED IN JAPAN &amp; ITALY</div>
+            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;" data-i18n="hero.restricted">RESTRICTED ALLOCATION</div>
           </div>
 
           <button id="hero-scroll-btn" class="scroll-indicator" data-cursor="ENTER">
-            <span>EXPLORE ARCHIVE</span>
+            <span data-i18n="hero.explore">EXPLORE ARCHIVE</span>
             <span class="scroll-line"></span>
           </button>
 
           <div style="text-align: right;">
-            <div>AUTUMN / WINTER 2026</div>
-            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;">COLLECTIONS 001 &amp; 002</div>
+            <div data-i18n="hero.season">AUTUMN / WINTER 2026</div>
+            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;" data-i18n="hero.collections">COLLECTIONS 001 &amp; 002</div>
           </div>
         </div>
       </div>
@@ -103,34 +114,34 @@
     <section id="manifesto" class="manifesto-section">
       <div class="section-container">
         <div class="section-tagline">
-          <span>[ 01 / PRINCIPLE ]</span>
+          <span data-i18n="manifesto.tag">[ 01 / PRINCIPLE ]</span>
           <span class="section-tagline-line"></span>
-          <span>DECLARATION OF DISAPPEARANCE</span>
+          <span data-i18n="manifesto.badge">DECLARATION OF DISAPPEARANCE</span>
         </div>
 
-        <h2 class="manifesto-monumental">
+        <h2 class="manifesto-monumental" data-i18n="manifesto.headline">
           In an era of relentless algorithmic visibility, <span class="highlight">silence</span> becomes the only authentic luxury.
         </h2>
 
         <div class="manifesto-columns">
           <div class="manifesto-col">
-            <h3>MATERIAL INTEGRITY</h3>
-            <p>
+            <h3 data-i18n="manifesto.col1Title">MATERIAL INTEGRITY</h3>
+            <p data-i18n="manifesto.col1Text">
               We reject seasonal acceleration and the vulgarity of mass production. Every piece exists as an unrepeatable specimen—sculpted from 620 GSM unbrushed loopback cotton, 16oz raw Japanese selvedge denim woven on low-tension vintage shuttle looms, and dry-waxed European canvases.
             </p>
           </div>
 
           <div class="manifesto-col">
-            <h3>RADICAL ANONYMITY</h3>
-            <p>
+            <h3 data-i18n="manifesto.col2Title">RADICAL ANONYMITY</h3>
+            <p data-i18n="manifesto.col2Text">
               The garments are stripped of commercial insignia. Instead, anatomical curved cuts, distressed star geometries, and muted heraldic intarsias offer tactile recognition solely to the initiated. To wear SILENT is to reclaim privacy as an art form.
             </p>
           </div>
         </div>
 
         <div class="manifesto-footer">
-          <span>NO ADVERTISING. NO SPONSORED GAZE.</span>
-          <span>STRICT ALLOCATION OF 10 TO 24 PIECES PER DISCIPLINE</span>
+          <span data-i18n="manifesto.foot1">NO ADVERTISING. NO SPONSORED GAZE.</span>
+          <span data-i18n="manifesto.foot2">STRICT ALLOCATION OF 10 TO 24 PIECES PER DISCIPLINE</span>
         </div>
       </div>
     </section>
@@ -140,17 +151,17 @@
       <div class="section-container">
         <div class="editorial-header">
           <div>
-            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="lookbook.tag">
               [ 02 / EDITORIAL FLOW ]
             </div>
-            <h2 class="editorial-title">THE MAGAZINE SPREAD</h2>
+            <h2 class="editorial-title" data-i18n="lookbook.title">THE MAGAZINE SPREAD</h2>
           </div>
           <div style="text-align: right; max-width: 380px;">
-            <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;">
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-i18n="lookbook.subtitle">
               PARIS CAMPAIGN SPREAD / COUTURE ARCHITECTURE
             </p>
-            <p style="font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: rgba(237,237,237,0.7); margin-top: 0.3rem;">
-              "Tactile intimacy captured in monochromatic stillness."
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: rgba(237,237,237,0.7); margin-top: 0.3rem;" data-i18n="lookbook.lead">
+              “Tactile intimacy captured in monochromatic stillness.”
             </p>
           </div>
         </div>
@@ -158,41 +169,41 @@
         <!-- Spread 01: Full Body Model + Macro Textile Inset -->
         <div class="spread-row">
           <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-05">
-            <img src="assets/editorial/silent_look01_model.jpg" alt="Look 01 — Destructed Silhouette" />
+            <img src="assets/editorial/silent_look01_model.jpg" alt="Look 01 — Destructed Silhouette" loading="lazy" />
             <div class="frame-gradient"></div>
             <div class="frame-caption">
               <div>
-                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;" data-i18n="lookbook.look1Sub">
                   ISSUE 001 / SPREAD 01
                 </span>
-                <h4>LOOK 01 — DESTRUCTED SILHOUETTE</h4>
+                <h4 data-i18n="lookbook.look1Title">LOOK 01 — DESTRUCTED SILHOUETTE</h4>
               </div>
-              <button class="frame-btn" data-cursor="INSPECT">INSPECT FIT [SL-05]</button>
+              <button class="frame-btn" data-cursor="INSPECT" data-i18n="lookbook.look1Btn">INSPECT FIT [SL-05]</button>
             </div>
           </div>
 
           <div class="editorial-aside">
             <div>
-              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1.5rem;">
+              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1.5rem;" data-i18n="lookbook.look1Dissection">
                 DISSECTION OF PROPORTION
               </div>
-              <blockquote class="editorial-quote">
-                "The silhouette ceases to represent the human body; it becomes an architectural shelter against surveillance."
+              <blockquote class="editorial-quote" data-i18n="lookbook.look1Quote">
+                “The silhouette ceases to represent the human body; it becomes an architectural shelter against surveillance.”
               </blockquote>
-              <p class="editorial-text" style="margin-top: 1.5rem;">
+              <p class="editorial-text" style="margin-top: 1.5rem;" data-i18n="lookbook.look1Text">
                 The bondage straps allow dynamic contraction of volume, transforming ultra-wide leg bell cuts into articulated geometric contours.
               </p>
             </div>
 
             <!-- Macro Detail Inset -->
             <div class="macro-detail-container" data-cursor="TEXTILE" data-open-piece="sl-03">
-              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem; text-align: right;">
+              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem; text-align: right;" data-i18n="lookbook.look2Fig">
                 FIG. 02 — SELVEDGE &amp; D-RING
               </div>
               <div class="magazine-frame aspect-square">
-                <img src="assets/editorial/silent_macro_textile.jpg" alt="Raw Selvedge Macro" />
+                <img src="assets/editorial/silent_macro_textile.jpg" alt="Raw Selvedge Macro" loading="lazy" />
               </div>
-              <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-align: right; margin-top: 0.5rem;">
+              <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-align: right; margin-top: 0.5rem;" data-i18n="lookbook.look2Caption">
                 RAW DISTRESSED THREADS / OXIDIZED STEEL
               </p>
             </div>
@@ -202,31 +213,31 @@
         <!-- Spread 02: Heraldic Occult Intarsia with Negative Space -->
         <div class="spread-row reversed">
           <div class="editorial-aside" style="justify-content: center;">
-            <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1rem;">
+            <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1rem;" data-i18n="lookbook.look3Tag">
               [ SPREAD 02 / ATELIER NOTES ]
             </div>
-            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;" data-i18n="lookbook.look3Title">
               Muted Heraldry on <span class="font-italic">Heavyweight Cotton</span>
             </h3>
-            <p class="editorial-text" style="padding-left: 0; margin-bottom: 2rem;">
+            <p class="editorial-text" style="padding-left: 0; margin-bottom: 2rem;" data-i18n="lookbook.look3Quote">
               The cross is stripped of dogmatic weight; transformed into a talisman of silence and contained defiance, screenprinted in tonal charcoal pigment discharge.
             </p>
-            <button class="frame-btn" data-cursor="INSPECT" data-open-piece="sl-01" style="align-self: flex-start;">
+            <button class="frame-btn" data-cursor="INSPECT" data-open-piece="sl-01" style="align-self: flex-start;" data-i18n="lookbook.look3Btn">
               VIEW ARCHIVE SPEC [SL-01]
             </button>
           </div>
 
           <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-01">
-            <img src="assets/editorial/silent_look02_editorial.jpg" alt="Look 03 — Heraldic Occult Intarsia" />
+            <img src="assets/editorial/silent_look02_editorial.jpg" alt="Look 03 — Heraldic Occult Intarsia" loading="lazy" />
             <div class="frame-gradient"></div>
             <div class="frame-caption">
               <div>
-                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;" data-i18n="lookbook.look3Sub">
                   ISSUE 001 / SPREAD 03
                 </span>
-                <h4>LOOK 03 — HERALDIC OCCULT INTARSIA</h4>
+                <h4 data-i18n="lookbook.look3Name">LOOK 03 — HERALDIC OCCULT INTARSIA</h4>
               </div>
-              <button class="frame-btn" data-cursor="REVEAL">REVEAL PIECE</button>
+              <button class="frame-btn" data-cursor="REVEAL" data-i18n="lookbook.look3Reveal">REVEAL PIECE</button>
             </div>
           </div>
         </div>
@@ -238,16 +249,16 @@
       <div class="section-container">
         <div class="editorial-header">
           <div>
-            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;" data-i18n="archive.tag">
               [ 03 / THE PERMANENT ARCHIVE ]
             </div>
-            <h2 class="editorial-title">HERMETIC INVENTORY</h2>
+            <h2 class="editorial-title" data-i18n="archive.title">HERMETIC INVENTORY</h2>
           </div>
 
           <div class="archive-filter-bar">
-            <button class="filter-btn active" data-filter="ALL" data-cursor="FILTER">COMPLETE ARCHIVE</button>
-            <button class="filter-btn" data-filter="DROP 001" data-cursor="FILTER">DROP 001</button>
-            <button class="filter-btn" data-filter="DROP 002" data-cursor="FILTER">DROP 002</button>
+            <button class="filter-btn active" data-filter="ALL" data-cursor="FILTER" data-i18n="archive.filterAll">COMPLETE ARCHIVE</button>
+            <button class="filter-btn" data-filter="DROP 001" data-cursor="FILTER" data-i18n="archive.filterDrop1">DROP 001</button>
+            <button class="filter-btn" data-filter="DROP 002" data-cursor="FILTER" data-i18n="archive.filterDrop2">DROP 002</button>
           </div>
         </div>
 
@@ -260,8 +271,8 @@
                 <span class="badge-drop">DROP 001</span>
                 <span class="badge-edition">24 PIECES CRAFTED</span>
               </div>
-              <img src="assets/archive/drop001_tee_blade.png" alt="Anatomical Curved-Seam Tee" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/archive/drop001_tee_blade.png" alt="Anatomical Curved-Seam Tee" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -272,7 +283,7 @@
               <p class="card-desc">320 GSM DOUBLE-FACED COTTON • TOKYO CUT</p>
               <div class="card-status-bar">
                 <span>ORIGIN: JAPAN</span>
-                <span>AVAILABLE</span>
+                <span data-i18n="archive.available">AVAILABLE</span>
               </div>
             </div>
           </article>
@@ -284,8 +295,8 @@
                 <span class="badge-drop">DROP 001</span>
                 <span class="badge-edition">16 PIECES CRAFTED</span>
               </div>
-              <img src="assets/archive/drop001_hoodie_silent.png" alt="Batwing Heavyweight Hoodie" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/archive/drop001_hoodie_silent.png" alt="Batwing Heavyweight Hoodie" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -296,7 +307,7 @@
               <p class="card-desc">620 GSM COMPACT FRENCH TERRY • MILAN</p>
               <div class="card-status-bar">
                 <span>ORIGIN: ITALY</span>
-                <span class="status-alert">LOW ALLOCATION</span>
+                <span class="status-alert" data-i18n="archive.lowAllocation">LOW ALLOCATION</span>
               </div>
             </div>
           </article>
@@ -308,8 +319,8 @@
                 <span class="badge-drop">DROP 001</span>
                 <span class="badge-edition">12 PIECES CRAFTED</span>
               </div>
-              <img src="assets/archive/drop001_denim_star_frayed.png" alt="Star Architecture Raw Denim" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/archive/drop001_denim_star_frayed.png" alt="Star Architecture Raw Denim" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -320,7 +331,7 @@
               <p class="card-desc">16OZ KURABO SELVEDGE • FRAYED STAR YOKE</p>
               <div class="card-status-bar">
                 <span>ORIGIN: KOJIMA</span>
-                <span>AVAILABLE</span>
+                <span data-i18n="archive.available">AVAILABLE</span>
               </div>
             </div>
           </article>
@@ -332,8 +343,8 @@
                 <span class="badge-drop">DROP 002</span>
                 <span class="badge-edition">14 PIECES CRAFTED</span>
               </div>
-              <img src="assets/archive/drop002_knit_bondage_black.png" alt="Heraldic Cropped Ribbed Knit" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/archive/drop002_knit_bondage_black.png" alt="Heraldic Cropped Ribbed Knit" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -344,7 +355,7 @@
               <p class="card-desc">70% MERINO / 30% CASHMERE • TONAL CROSS</p>
               <div class="card-status-bar">
                 <span>ORIGIN: BIELLA</span>
-                <span>AVAILABLE</span>
+                <span data-i18n="archive.available">AVAILABLE</span>
               </div>
             </div>
           </article>
@@ -356,8 +367,8 @@
                 <span class="badge-drop">DROP 002</span>
                 <span class="badge-edition">10 PIECES CRAFTED</span>
               </div>
-              <img src="assets/editorial/silent_look01_model.jpg" alt="Modular Bondage Trousers" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/editorial/silent_look01_model.jpg" alt="Modular Bondage Trousers" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -368,7 +379,7 @@
               <p class="card-desc">490 GSM DRY-WAXED CANVAS • STEEL D-RINGS</p>
               <div class="card-status-bar">
                 <span>ORIGIN: ANTWERP</span>
-                <span class="status-alert">LOW ALLOCATION</span>
+                <span class="status-alert" data-i18n="archive.lowAllocation">LOW ALLOCATION</span>
               </div>
             </div>
           </article>
@@ -380,8 +391,8 @@
                 <span class="badge-drop">DROP 001</span>
                 <span class="badge-edition">15 PIECES CRAFTED</span>
               </div>
-              <img src="assets/archive/drop001_hoodie_mineral.png" alt="Mineral Acid-Wash Raglan Hood" />
-              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+              <img src="assets/archive/drop001_hoodie_mineral.png" alt="Mineral Acid-Wash Raglan Hood" loading="lazy" />
+              <div class="card-hover-prompt" data-i18n="archive.prompt">INSPECT SPECIFICATION ↗</div>
             </div>
             <div class="card-meta">
               <div class="card-meta-top">
@@ -392,17 +403,17 @@
               <p class="card-desc">580 GSM FRENCH TERRY • STONE ENZYME</p>
               <div class="card-status-bar">
                 <span>ORIGIN: MILAN</span>
-                <span>AVAILABLE</span>
+                <span data-i18n="archive.available">AVAILABLE</span>
               </div>
             </div>
           </article>
         </div>
 
-        <div style="margin-top: 8rem; text-align: center; border-top: 1px solid var(--border-subtle); padding-top: 3rem;">
-          <p style="font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--color-ash); max-width: 600px; margin: 0 auto;">
-            "We do not mass produce. When an edition is exhausted, the pattern is permanently retired to the vault."
+        <div style="margin-top: 8rem; text-align: center; border-top: 1px solid var(--border-hairline); padding-top: 3.5rem;">
+          <p style="font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--color-ash); max-width: 600px; margin: 0 auto;" data-i18n="archive.quote">
+            “We do not mass produce. When an edition is exhausted, the pattern is permanently retired to the vault.”
           </p>
-          <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); text-transform: uppercase; margin-top: 1rem;">
+          <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); text-transform: uppercase; margin-top: 1rem;" data-i18n="archive.vaultNote">
             SILENT HERMETIC ARCHIVE — ISSUE 001
           </div>
         </div>
@@ -412,7 +423,7 @@
     <!-- 5. Archival Piece Inspector Modal -->
     <div id="piece-modal" class="modal-overlay" role="dialog" aria-modal="true">
       <div class="modal-window">
-        <button id="modal-close-btn" class="modal-close-btn" data-cursor="CLOSE">[ ESC / CLOSE ]</button>
+        <button id="modal-close-btn" class="modal-close-btn" data-cursor="CLOSE" data-i18n="modal.close">[ ESC / CLOSE ]</button>
 
         <div class="modal-left">
           <div class="modal-main-image-box">
@@ -433,7 +444,7 @@
             <h2 id="modal-piece-title" class="modal-title">ANATOMICAL CURVED-SEAM TEE</h2>
             <div class="modal-price-row">
               <span id="modal-piece-price" class="modal-price">€380</span>
-              <span id="modal-piece-status" style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; border: 1px solid var(--border-subtle); padding: 2px 6px;">AVAILABLE</span>
+              <span id="modal-piece-status" style="font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.25em; border: 1px solid var(--border-hairline); padding: 2px 6px;">AVAILABLE</span>
             </div>
           </div>
 
@@ -442,41 +453,41 @@
           </p>
 
           <div>
-            <div class="modal-section-title">STRUCTURAL ANATOMY</div>
+            <div class="modal-section-title" data-i18n="modal.anatomyTitle">STRUCTURAL ANATOMY</div>
             <ul id="modal-anatomy-list" class="anatomy-list"></ul>
           </div>
 
           <div>
             <div class="modal-section-title" style="display: flex; justify-content: space-between;">
-              <span>MEASUREMENTS (CM)</span>
-              <span style="font-size: 8px; color: var(--color-ash);">CLICK SIZE TO ALLOCATE</span>
+              <span data-i18n="modal.measurementsTitle">MEASUREMENTS (CM)</span>
+              <span style="font-size: 8px; color: var(--color-ash);" data-i18n="modal.clickSizePrompt">CLICK SIZE TO ALLOCATE</span>
             </div>
             <table class="measurements-table">
               <thead>
                 <tr>
-                  <th>SIZE</th>
-                  <th>CHEST</th>
-                  <th>SHOULDER</th>
-                  <th>LENGTH</th>
-                  <th>HEM</th>
+                  <th data-i18n="modal.thSize">SIZE</th>
+                  <th data-i18n="modal.thChest">CHEST</th>
+                  <th data-i18n="modal.thShoulder">SHOULDER</th>
+                  <th data-i18n="modal.thLength">LENGTH</th>
+                  <th data-i18n="modal.thHem">HEM</th>
                 </tr>
               </thead>
               <tbody id="modal-measurements-body"></tbody>
             </table>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash);">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-hairline); padding-top: 1rem; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash);">
             <div>
-              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;">COMPOSITION</span>
+              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;" data-i18n="modal.composition">COMPOSITION</span>
               <span id="modal-piece-material" style="color: var(--color-bone);">320 GSM COTTON</span>
             </div>
             <div>
-              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;">ORIGIN</span>
+              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;" data-i18n="modal.origin">ORIGIN</span>
               <span id="modal-piece-origin" style="color: var(--color-bone);">PARIS ATELIER</span>
             </div>
           </div>
 
-          <button id="modal-acquire-btn" class="modal-acquire-btn" data-cursor="ACQUIRE">
+          <button id="modal-acquire-btn" class="modal-acquire-btn" data-cursor="ACQUIRE" data-i18n="modal.acquireBtn">
             REQUEST PIECE ALLOCATION
           </button>
         </div>
@@ -488,12 +499,12 @@
       <aside class="drawer-panel">
         <div class="drawer-header">
           <div>
-            <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); display: block; text-transform: uppercase;">
+            <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); display: block; text-transform: uppercase;" data-i18n="drawer.dossier">
               CONFIDENTIAL DOSSIER
             </span>
-            <h3 class="drawer-title">THE PRIVATE DRAWER</h3>
+            <h3 class="drawer-title" data-i18n="drawer.title">THE PRIVATE DRAWER</h3>
           </div>
-          <button id="drawer-close-btn" style="background: none; border: none; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-cursor="CLOSE">
+          <button id="drawer-close-btn" style="background: none; border: none; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-cursor="CLOSE" data-i18n="drawer.close">
             [ CLOSE ]
           </button>
         </div>
@@ -501,30 +512,30 @@
         <div id="drawer-items-list" class="drawer-items-list"></div>
 
         <div id="drawer-empty" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.8rem; opacity: 0.6;">
-          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.3em;">DRAWER IS EMPTY</span>
-          <p style="font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--color-ash); max-width: 240px;">
-            "No garments allocated yet. Silence awaits your choice."
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em;" data-i18n="drawer.emptyTitle">DRAWER IS EMPTY</span>
+          <p style="font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--color-ash); max-width: 240px;" data-i18n="drawer.emptySub">
+            “No garments allocated yet. Silence awaits your choice.”
           </p>
         </div>
 
         <div id="drawer-footer" class="drawer-footer" style="display: none;">
           <div>
-            <label style="display: block; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 4px;">
+            <label style="display: block; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 4px;" data-i18n="drawer.directiveLabel">
               CONFIDENTIAL DIRECTIVE / SIZING INQUIRY:
             </label>
-            <input type="text" class="drawer-note-input" placeholder="Enter private address or instructions..." />
+            <input type="text" class="drawer-note-input" data-i18n-attr="placeholder:drawer.directivePlaceholder" placeholder="Enter private address or instructions..." />
           </div>
 
           <div class="drawer-total-row">
-            <span style="color: var(--color-ash);">TOTAL ARCHIVAL ESTIMATE:</span>
+            <span style="color: var(--color-ash);" data-i18n="drawer.totalLabel">TOTAL ARCHIVAL ESTIMATE:</span>
             <span id="drawer-total-amount" class="drawer-total-amount">€0</span>
           </div>
 
-          <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: rgba(122,122,122,0.7);">
+          <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: rgba(120,120,120,0.7);" data-i18n="drawer.courierNote">
             * INCLUDES INSURED PRIVATE COURIER DIRECT FROM PARIS ATELIER.
           </p>
 
-          <button id="drawer-checkout-btn" class="drawer-checkout-btn" data-cursor="CONFIRM">
+          <button id="drawer-checkout-btn" class="drawer-checkout-btn" data-cursor="CONFIRM" data-i18n="drawer.checkoutBtn">
             CONFIRM PRIVATE ACQUISITION
           </button>
         </div>
@@ -536,12 +547,12 @@
       <div class="section-container">
         <div class="footer-grid">
           <div class="footer-col">
-            <h4 style="font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: 0.3em; margin-bottom: 0.8rem;">SILENT</h4>
-            <p>AN INDEPENDENT ATELIER EXPLORING THE BOUNDARIES OF HIGH COUTURE BRUTALISM, OBSIDIAN TEXTILES, AND TOTAL ANONYMITY.</p>
+            <h4 style="font-family: var(--font-serif); font-size: 1.4rem; letter-spacing: 0.3em; margin-bottom: 0.8rem;" data-i18n="footer.title">SILENT</h4>
+            <p data-i18n="footer.desc">AN INDEPENDENT ATELIER EXPLORING THE BOUNDARIES OF HIGH COUTURE BRUTALISM, OBSIDIAN TEXTILES, AND TOTAL ANONYMITY.</p>
           </div>
 
           <div class="footer-col">
-            <h5>PHYSICAL LOCATIONS</h5>
+            <h5 data-i18n="footer.locations">PHYSICAL LOCATIONS</h5>
             <p>
               <strong style="color: var(--color-bone); display: block;">PARIS TALLER</strong>
               RUE DE RICHELIEU, 75001<br/><br/>
@@ -553,37 +564,37 @@
           </div>
 
           <div class="footer-col">
-            <h5>TRANSMISSIONS</h5>
+            <h5 data-i18n="footer.transmissions">TRANSMISSIONS</h5>
             <p>
-              <span style="font-size: 8px; opacity: 0.5; display: block;">PRIVATE COMMUNICATIONS:</span>
+              <span style="font-size: 8px; opacity: 0.5; display: block;" data-i18n="footer.privateComms">PRIVATE COMMUNICATIONS:</span>
               <a href="mailto:atelier@silent-archive.com" style="color: var(--color-bone); text-decoration: underline;">atelier@silent-archive.com</a><br/><br/>
-              <span style="font-size: 8px; opacity: 0.5; display: block;">ENCRYPTED DISPATCH:</span>
+              <span style="font-size: 8px; opacity: 0.5; display: block;" data-i18n="footer.encryptedDispatch">ENCRYPTED DISPATCH:</span>
               <span>PGP KEY: 0x9F42B6A</span>
             </p>
           </div>
 
           <div class="footer-col">
-            <h5>CURRENCY REGISTER</h5>
+            <h5 data-i18n="footer.currencyReg">CURRENCY REGISTER</h5>
             <div class="footer-currency-buttons">
               <button class="footer-curr-btn active" data-currency="EUR">EUR</button>
               <button class="footer-curr-btn" data-currency="USD">USD</button>
               <button class="footer-curr-btn" data-currency="GBP">GBP</button>
               <button class="footer-curr-btn" data-currency="JPY">JPY</button>
             </div>
-            <p style="font-size: 8px; opacity: 0.5; margin-top: 0.8rem;">
+            <p style="font-size: 8px; opacity: 0.5; margin-top: 0.8rem;" data-i18n="footer.ecbNote">
               REAL-TIME SETTLEMENTS CALCULATED VIA EUROPEAN CENTRAL BANK FIXING.
             </p>
           </div>
         </div>
 
         <div class="footer-bottom-row">
-          <div>© 2026 SILENT ARCHIVE. ALL PATTERNS &amp; DESIGNS COPYRIGHT PROTECTED.</div>
+          <div data-i18n="footer.copyright">© 2026 SILENT ARCHIVE. ALL PATTERNS &amp; DESIGNS COPYRIGHT PROTECTED.</div>
           <div style="display: flex; gap: 1.5rem;">
-            <span>PRIVACY PROTOCOL</span>
-            <span>TERMS OF DISAPPEARANCE</span>
-            <span>VAULT ACCESS</span>
+            <span data-i18n="footer.privacy">PRIVACY PROTOCOL</span>
+            <span data-i18n="footer.terms">TERMS OF DISAPPEARANCE</span>
+            <span data-i18n="footer.vault">VAULT ACCESS</span>
           </div>
-          <div>ISSUE 001 / MATIÈRE ET VIDE</div>
+          <div data-i18n="footer.issueNote">ISSUE 001 / MATIÈRE ET VIDE</div>
         </div>
       </div>
     </footer>
