@@ -1013,6 +1013,7 @@ body {
   .modal-window {
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
+    max-height: 88vh;
   }
 }
 
@@ -1043,7 +1044,7 @@ body {
 
 .modal-left {
   background-color: rgba(14, 14, 14, 0.7);
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1054,6 +1055,8 @@ body {
   .modal-left {
     border-bottom: none;
     border-right: 1px solid var(--border-hairline);
+    max-height: 88vh;
+    overflow: hidden;
   }
 }
 
@@ -1081,12 +1084,12 @@ body {
   display: flex;
   gap: 0.8rem;
   justify-content: center;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 .thumb-btn {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   background: var(--color-void);
   border: 1px solid var(--border-hairline);
   padding: 4px;
@@ -1105,11 +1108,19 @@ body {
 }
 
 .modal-right {
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 1.1rem;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+@media (min-width: 992px) {
+  .modal-right {
+    max-height: 88vh;
+  }
 }
 
 .modal-header {

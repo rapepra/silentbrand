@@ -1115,6 +1115,11 @@
         acquireBtn.textContent = I18N[currentLang].modal.acquireBtn;
       }, 2000);
     }
+    // High-luxury drawer reveal transition
+    setTimeout(() => {
+      closePieceModal();
+      openCartDrawer();
+    }, 450);
   }
 
   function removeFromCart(index) {
