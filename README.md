@@ -1,9 +1,17 @@
 # SILENT — The Luxury of Disappearance
-### Issue 001: Void & Matter (Haute-Couture E-Commerce & Editorial Archive)
+### Issue 001: Void & Matter (Pure HTML5 & Vanilla CSS3 Architecture)
 
 > *"We do not design garments to be seen. We construct armor to vanish."*
 
-**SILENT** is an avant-garde luxury fashion house exploring opacity, contemporary gothic tension, architectural silhouettes, and radical disappearance. This web platform functions as a hybrid between an independent cult art magazine, a private archive, and an opaque acquisition chamber.
+**SILENT** is an avant-garde luxury fashion house exploring opacity, contemporary gothic tension, architectural silhouettes, and radical disappearance. 
+
+Esta rama (`vanilla-html-css`) implementa la versión **100% optimizada en HTML5 semántico puro y Vanilla CSS3**, con máxima ligereza, cero dependencias de compilación y renderizado instantáneo en cualquier navegador.
+
+---
+
+## Branches del Repositorio
+* **`vanilla-html-css` (Esta rama):** Arquitectura pura en HTML5, CSS3 y Vanilla JavaScript sin runtime de framework, optimizada para rendimiento extremo, velocidad de carga y visualización web inmediata.
+* **`main`:** Implementación modular en React 18 + Vite + Tailwind CSS + Framer Motion.
 
 ---
 

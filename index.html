@@ -1,19 +1,591 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-silent-void text-silent-bone antialiased selection:bg-silent-bloodGlow selection:text-white">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23EDEDED'>†</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SILENT — The Luxury of Disappearance | Issue 001</title>
     <meta name="description" content="SILENT is an independent high-luxury avant-garde fashion house exploring opacity, contemporary gothic tension, and radical disappearance. Issue 001: Void & Matter." />
     
-    <!-- Google Fonts: Editorial Serifs & Brutalist Monospace -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23EDEDED'>†</text></svg>" />
+
+    <!-- Google Fonts: Editorial Serifs, Displays & Monospace -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Pure Haute-Couture Vanilla CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Optimized Vanilla JS Core Engine -->
+    <script src="js/app.js" defer></script>
   </head>
-  <body class="bg-silent-void text-silent-bone overflow-x-hidden relative min-h-screen">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body>
+    <!-- 35mm Analog Film Grain Overlay -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="nav-header">
+      <button class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-cursor="SILENT">
+        <span class="brand-title">SILENT</span>
+        <span class="brand-sub">DISAPPEARANCE ARCHIVE</span>
+      </button>
+
+      <div class="nav-center-issue">
+        <span class="ping-dot"></span>
+        <span>ISSUE 001 — VOID &amp; MATTER</span>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Ambient Sound Toggle -->
+        <button id="sound-trigger" class="sound-trigger" data-cursor="AUDIO" title="Atmospheric Drone Sound">
+          <span class="sound-bars">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </span>
+          <span id="sound-label">AUDIO [OFF]</span>
+        </button>
+
+        <!-- Private Drawer Trigger -->
+        <button id="drawer-trigger" class="drawer-trigger" data-cursor="DRAWER">
+          <span>DRAWER</span>
+          <span id="drawer-count" class="drawer-badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 1. Hero Cover / The Veil -->
+    <section class="hero-section">
+      <div class="hero-bg">
+        <img src="assets/editorial/silent_hero_cover.jpg" alt="SILENT Issue 001 Cover" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="section-container hero-content">
+        <div class="hero-top-meta">
+          <div>
+            <span>VOL. 01 / ARCHIVE MANIFEST</span>
+            <span style="margin: 0 1rem; opacity: 0.3;">|</span>
+            <span style="color: var(--color-bone);">THE LUXURY OF DISAPPEARANCE</span>
+          </div>
+          <div>
+            <span>48.8566° N, 2.3522° E</span>
+          </div>
+        </div>
+
+        <div class="hero-center">
+          <h1 class="hero-title">SILENT</h1>
+          <p class="hero-quote">"We do not design garments to be seen. We construct armor to vanish."</p>
+          <p class="hero-subtag">ISSUE 001 — VOID &amp; MATTER</p>
+        </div>
+
+        <div class="hero-bottom-meta">
+          <div>
+            <div>FABRICATED IN JAPAN &amp; ITALY</div>
+            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;">RESTRICTED ALLOCATION</div>
+          </div>
+
+          <button id="hero-scroll-btn" class="scroll-indicator" data-cursor="ENTER">
+            <span>EXPLORE ARCHIVE</span>
+            <span class="scroll-line"></span>
+          </button>
+
+          <div style="text-align: right;">
+            <div>AUTUMN / WINTER 2026</div>
+            <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;">COLLECTIONS 001 &amp; 002</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Manifesto -->
+    <section id="manifesto" class="manifesto-section">
+      <div class="section-container">
+        <div class="section-tagline">
+          <span>[ 01 / PRINCIPLE ]</span>
+          <span class="section-tagline-line"></span>
+          <span>DECLARATION OF DISAPPEARANCE</span>
+        </div>
+
+        <h2 class="manifesto-monumental">
+          In an era of relentless algorithmic visibility, <span class="highlight">silence</span> becomes the only authentic luxury.
+        </h2>
+
+        <div class="manifesto-columns">
+          <div class="manifesto-col">
+            <h3>MATERIAL INTEGRITY</h3>
+            <p>
+              We reject seasonal acceleration and the vulgarity of mass production. Every piece exists as an unrepeatable specimen—sculpted from 620 GSM unbrushed loopback cotton, 16oz raw Japanese selvedge denim woven on low-tension vintage shuttle looms, and dry-waxed European canvases.
+            </p>
+          </div>
+
+          <div class="manifesto-col">
+            <h3>RADICAL ANONYMITY</h3>
+            <p>
+              The garments are stripped of commercial insignia. Instead, anatomical curved cuts, distressed star geometries, and muted heraldic intarsias offer tactile recognition solely to the initiated. To wear SILENT is to reclaim privacy as an art form.
+            </p>
+          </div>
+        </div>
+
+        <div class="manifesto-footer">
+          <span>NO ADVERTISING. NO SPONSORED GAZE.</span>
+          <span>STRICT ALLOCATION OF 10 TO 24 PIECES PER DISCIPLINE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Lookbook / Editorial Flow (The Magazine) -->
+    <section id="lookbook" class="lookbook-section">
+      <div class="section-container">
+        <div class="editorial-header">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;">
+              [ 02 / EDITORIAL FLOW ]
+            </div>
+            <h2 class="editorial-title">THE MAGAZINE SPREAD</h2>
+          </div>
+          <div style="text-align: right; max-width: 380px;">
+            <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;">
+              PARIS CAMPAIGN SPREAD / COUTURE ARCHITECTURE
+            </p>
+            <p style="font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: rgba(237,237,237,0.7); margin-top: 0.3rem;">
+              "Tactile intimacy captured in monochromatic stillness."
+            </p>
+          </div>
+        </div>
+
+        <!-- Spread 01: Full Body Model + Macro Textile Inset -->
+        <div class="spread-row">
+          <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-05">
+            <img src="assets/editorial/silent_look01_model.jpg" alt="Look 01 — Destructed Silhouette" />
+            <div class="frame-gradient"></div>
+            <div class="frame-caption">
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;">
+                  ISSUE 001 / SPREAD 01
+                </span>
+                <h4>LOOK 01 — DESTRUCTED SILHOUETTE</h4>
+              </div>
+              <button class="frame-btn" data-cursor="INSPECT">INSPECT FIT [SL-05]</button>
+            </div>
+          </div>
+
+          <div class="editorial-aside">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1.5rem;">
+                DISSECTION OF PROPORTION
+              </div>
+              <blockquote class="editorial-quote">
+                "The silhouette ceases to represent the human body; it becomes an architectural shelter against surveillance."
+              </blockquote>
+              <p class="editorial-text" style="margin-top: 1.5rem;">
+                The bondage straps allow dynamic contraction of volume, transforming ultra-wide leg bell cuts into articulated geometric contours.
+              </p>
+            </div>
+
+            <!-- Macro Detail Inset -->
+            <div class="macro-detail-container" data-cursor="TEXTILE" data-open-piece="sl-03">
+              <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem; text-align: right;">
+                FIG. 02 — SELVEDGE &amp; D-RING
+              </div>
+              <div class="magazine-frame aspect-square">
+                <img src="assets/editorial/silent_macro_textile.jpg" alt="Raw Selvedge Macro" />
+              </div>
+              <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-align: right; margin-top: 0.5rem;">
+                RAW DISTRESSED THREADS / OXIDIZED STEEL
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spread 02: Heraldic Occult Intarsia with Negative Space -->
+        <div class="spread-row reversed">
+          <div class="editorial-aside" style="justify-content: center;">
+            <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 1rem;">
+              [ SPREAD 02 / ATELIER NOTES ]
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">
+              Muted Heraldry on <span class="font-italic">Heavyweight Cotton</span>
+            </h3>
+            <p class="editorial-text" style="padding-left: 0; margin-bottom: 2rem;">
+              The cross is stripped of dogmatic weight; transformed into a talisman of silence and contained defiance, screenprinted in tonal charcoal pigment discharge.
+            </p>
+            <button class="frame-btn" data-cursor="INSPECT" data-open-piece="sl-01" style="align-self: flex-start;">
+              VIEW ARCHIVE SPEC [SL-01]
+            </button>
+          </div>
+
+          <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-01">
+            <img src="assets/editorial/silent_look02_editorial.jpg" alt="Look 03 — Heraldic Occult Intarsia" />
+            <div class="frame-gradient"></div>
+            <div class="frame-caption">
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); display: block; margin-bottom: 4px;">
+                  ISSUE 001 / SPREAD 03
+                </span>
+                <h4>LOOK 03 — HERALDIC OCCULT INTARSIA</h4>
+              </div>
+              <button class="frame-btn" data-cursor="REVEAL">REVEAL PIECE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. The Archive / Collection -->
+    <section id="archive" class="archive-section">
+      <div class="section-container">
+        <div class="editorial-header">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.4em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem;">
+              [ 03 / THE PERMANENT ARCHIVE ]
+            </div>
+            <h2 class="editorial-title">HERMETIC INVENTORY</h2>
+          </div>
+
+          <div class="archive-filter-bar">
+            <button class="filter-btn active" data-filter="ALL" data-cursor="FILTER">COMPLETE ARCHIVE</button>
+            <button class="filter-btn" data-filter="DROP 001" data-cursor="FILTER">DROP 001</button>
+            <button class="filter-btn" data-filter="DROP 002" data-cursor="FILTER">DROP 002</button>
+          </div>
+        </div>
+
+        <!-- 3-Column Asymmetric Staggered Grid -->
+        <div class="archive-grid">
+          <!-- Card 1: SL-01 -->
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-01" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 001</span>
+                <span class="badge-edition">24 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/archive/drop001_tee_blade.png" alt="Anatomical Curved-Seam Tee" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-01</span>
+                <span class="price" data-piece-price-eur="380">€380</span>
+              </div>
+              <h3 class="card-name">ANATOMICAL CURVED-SEAM TEE</h3>
+              <p class="card-desc">320 GSM DOUBLE-FACED COTTON • TOKYO CUT</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: JAPAN</span>
+                <span>AVAILABLE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: SL-02 -->
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-02" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 001</span>
+                <span class="badge-edition">16 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/archive/drop001_hoodie_silent.png" alt="Batwing Heavyweight Hoodie" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-02</span>
+                <span class="price" data-piece-price-eur="680">€680</span>
+              </div>
+              <h3 class="card-name">BATWING HEAVYWEIGHT HOODIE</h3>
+              <p class="card-desc">620 GSM COMPACT FRENCH TERRY • MILAN</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: ITALY</span>
+                <span class="status-alert">LOW ALLOCATION</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: SL-03 -->
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-03" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 001</span>
+                <span class="badge-edition">12 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/archive/drop001_denim_star_frayed.png" alt="Star Architecture Raw Denim" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-03</span>
+                <span class="price" data-piece-price-eur="790">€790</span>
+              </div>
+              <h3 class="card-name">STAR ARCHITECTURE RAW DENIM</h3>
+              <p class="card-desc">16OZ KURABO SELVEDGE • FRAYED STAR YOKE</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: KOJIMA</span>
+                <span>AVAILABLE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: SL-04 -->
+          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-04" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 002</span>
+                <span class="badge-edition">14 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/archive/drop002_knit_bondage_black.png" alt="Heraldic Cropped Ribbed Knit" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-04</span>
+                <span class="price" data-piece-price-eur="720">€720</span>
+              </div>
+              <h3 class="card-name">HERALDIC CROPPED RIBBED KNIT</h3>
+              <p class="card-desc">70% MERINO / 30% CASHMERE • TONAL CROSS</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: BIELLA</span>
+                <span>AVAILABLE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: SL-05 -->
+          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-05" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 002</span>
+                <span class="badge-edition">10 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/editorial/silent_look01_model.jpg" alt="Modular Bondage Trousers" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-05</span>
+                <span class="price" data-piece-price-eur="850">€850</span>
+              </div>
+              <h3 class="card-name">MODULAR BONDAGE TROUSERS</h3>
+              <p class="card-desc">490 GSM DRY-WAXED CANVAS • STEEL D-RINGS</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: ANTWERP</span>
+                <span class="status-alert">LOW ALLOCATION</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: SL-06 -->
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-06" data-cursor="REVEAL">
+            <div class="card-image-box">
+              <div class="card-badge">
+                <span class="badge-drop">DROP 001</span>
+                <span class="badge-edition">15 PIECES CRAFTED</span>
+              </div>
+              <img src="assets/archive/drop001_hoodie_mineral.png" alt="Mineral Acid-Wash Raglan Hood" />
+              <div class="card-hover-prompt">INSPECT SPECIFICATION ↗</div>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-top">
+                <span>ARCHIVE CODE: SL-06</span>
+                <span class="price" data-piece-price-eur="640">€640</span>
+              </div>
+              <h3 class="card-name">MINERAL ACID-WASH RAGLAN HOOD</h3>
+              <p class="card-desc">580 GSM FRENCH TERRY • STONE ENZYME</p>
+              <div class="card-status-bar">
+                <span>ORIGIN: MILAN</span>
+                <span>AVAILABLE</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 8rem; text-align: center; border-top: 1px solid var(--border-subtle); padding-top: 3rem;">
+          <p style="font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--color-ash); max-width: 600px; margin: 0 auto;">
+            "We do not mass produce. When an edition is exhausted, the pattern is permanently retired to the vault."
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); text-transform: uppercase; margin-top: 1rem;">
+            SILENT HERMETIC ARCHIVE — ISSUE 001
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Archival Piece Inspector Modal -->
+    <div id="piece-modal" class="modal-overlay" role="dialog" aria-modal="true">
+      <div class="modal-window">
+        <button id="modal-close-btn" class="modal-close-btn" data-cursor="CLOSE">[ ESC / CLOSE ]</button>
+
+        <div class="modal-left">
+          <div class="modal-main-image-box">
+            <img id="modal-main-image" src="" alt="Garment View" />
+            <div id="modal-view-label" style="position: absolute; top: 12px; left: 12px; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.3em; color: var(--color-ash);">
+              SPECIMEN VIEW 01 / 03
+            </div>
+          </div>
+          <div id="modal-thumbnails" class="modal-thumbnails"></div>
+        </div>
+
+        <div class="modal-right">
+          <div class="modal-header">
+            <div class="modal-code-row">
+              <span id="modal-piece-code">ARCHIVE CODE: SL-01</span>
+              <span id="modal-piece-edition" style="color: var(--color-bone);">24 PIECES CRAFTED</span>
+            </div>
+            <h2 id="modal-piece-title" class="modal-title">ANATOMICAL CURVED-SEAM TEE</h2>
+            <div class="modal-price-row">
+              <span id="modal-piece-price" class="modal-price">€380</span>
+              <span id="modal-piece-status" style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; border: 1px solid var(--border-subtle); padding: 2px 6px;">AVAILABLE</span>
+            </div>
+          </div>
+
+          <p id="modal-piece-desc" class="modal-desc">
+            Ergonomically sculpted t-shirt featuring dual curved front seam paneling following thoracic muscle lines.
+          </p>
+
+          <div>
+            <div class="modal-section-title">STRUCTURAL ANATOMY</div>
+            <ul id="modal-anatomy-list" class="anatomy-list"></ul>
+          </div>
+
+          <div>
+            <div class="modal-section-title" style="display: flex; justify-content: space-between;">
+              <span>MEASUREMENTS (CM)</span>
+              <span style="font-size: 8px; color: var(--color-ash);">CLICK SIZE TO ALLOCATE</span>
+            </div>
+            <table class="measurements-table">
+              <thead>
+                <tr>
+                  <th>SIZE</th>
+                  <th>CHEST</th>
+                  <th>SHOULDER</th>
+                  <th>LENGTH</th>
+                  <th>HEM</th>
+                </tr>
+              </thead>
+              <tbody id="modal-measurements-body"></tbody>
+            </table>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash);">
+            <div>
+              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;">COMPOSITION</span>
+              <span id="modal-piece-material" style="color: var(--color-bone);">320 GSM COTTON</span>
+            </div>
+            <div>
+              <span style="color: rgba(255,255,255,0.4); display: block; margin-bottom: 2px;">ORIGIN</span>
+              <span id="modal-piece-origin" style="color: var(--color-bone);">PARIS ATELIER</span>
+            </div>
+          </div>
+
+          <button id="modal-acquire-btn" class="modal-acquire-btn" data-cursor="ACQUIRE">
+            REQUEST PIECE ALLOCATION
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. The Private Drawer / Cart -->
+    <div id="cart-drawer" class="drawer-overlay">
+      <aside class="drawer-panel">
+        <div class="drawer-header">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--color-ash); display: block; text-transform: uppercase;">
+              CONFIDENTIAL DOSSIER
+            </span>
+            <h3 class="drawer-title">THE PRIVATE DRAWER</h3>
+          </div>
+          <button id="drawer-close-btn" style="background: none; border: none; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-cursor="CLOSE">
+            [ CLOSE ]
+          </button>
+        </div>
+
+        <div id="drawer-items-list" class="drawer-items-list"></div>
+
+        <div id="drawer-empty" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.8rem; opacity: 0.6;">
+          <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.3em;">DRAWER IS EMPTY</span>
+          <p style="font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--color-ash); max-width: 240px;">
+            "No garments allocated yet. Silence awaits your choice."
+          </p>
+        </div>
+
+        <div id="drawer-footer" class="drawer-footer" style="display: none;">
+          <div>
+            <label style="display: block; font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 4px;">
+              CONFIDENTIAL DIRECTIVE / SIZING INQUIRY:
+            </label>
+            <input type="text" class="drawer-note-input" placeholder="Enter private address or instructions..." />
+          </div>
+
+          <div class="drawer-total-row">
+            <span style="color: var(--color-ash);">TOTAL ARCHIVAL ESTIMATE:</span>
+            <span id="drawer-total-amount" class="drawer-total-amount">€0</span>
+          </div>
+
+          <p style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: rgba(122,122,122,0.7);">
+            * INCLUDES INSURED PRIVATE COURIER DIRECT FROM PARIS ATELIER.
+          </p>
+
+          <button id="drawer-checkout-btn" class="drawer-checkout-btn" data-cursor="CONFIRM">
+            CONFIRM PRIVATE ACQUISITION
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 7. Colophon / Footer -->
+    <footer class="colophon-footer">
+      <div class="section-container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 style="font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: 0.3em; margin-bottom: 0.8rem;">SILENT</h4>
+            <p>AN INDEPENDENT ATELIER EXPLORING THE BOUNDARIES OF HIGH COUTURE BRUTALISM, OBSIDIAN TEXTILES, AND TOTAL ANONYMITY.</p>
+          </div>
+
+          <div class="footer-col">
+            <h5>PHYSICAL LOCATIONS</h5>
+            <p>
+              <strong style="color: var(--color-bone); display: block;">PARIS TALLER</strong>
+              RUE DE RICHELIEU, 75001<br/><br/>
+              <strong style="color: var(--color-bone); display: block;">TOKYO ARCHIVE</strong>
+              AOYAMA, MINATO-KU<br/><br/>
+              <strong style="color: var(--color-bone); display: block;">ANTWERP LAB</strong>
+              KLOOSTERSTRAAT
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>TRANSMISSIONS</h5>
+            <p>
+              <span style="font-size: 8px; opacity: 0.5; display: block;">PRIVATE COMMUNICATIONS:</span>
+              <a href="mailto:atelier@silent-archive.com" style="color: var(--color-bone); text-decoration: underline;">atelier@silent-archive.com</a><br/><br/>
+              <span style="font-size: 8px; opacity: 0.5; display: block;">ENCRYPTED DISPATCH:</span>
+              <span>PGP KEY: 0x9F42B6A</span>
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>CURRENCY REGISTER</h5>
+            <div class="footer-currency-buttons">
+              <button class="footer-curr-btn active" data-currency="EUR">EUR</button>
+              <button class="footer-curr-btn" data-currency="USD">USD</button>
+              <button class="footer-curr-btn" data-currency="GBP">GBP</button>
+              <button class="footer-curr-btn" data-currency="JPY">JPY</button>
+            </div>
+            <p style="font-size: 8px; opacity: 0.5; margin-top: 0.8rem;">
+              REAL-TIME SETTLEMENTS CALCULATED VIA EUROPEAN CENTRAL BANK FIXING.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <div>© 2026 SILENT ARCHIVE. ALL PATTERNS &amp; DESIGNS COPYRIGHT PROTECTED.</div>
+          <div style="display: flex; gap: 1.5rem;">
+            <span>PRIVACY PROTOCOL</span>
+            <span>TERMS OF DISAPPEARANCE</span>
+            <span>VAULT ACCESS</span>
+          </div>
+          <div>ISSUE 001 / MATIÈRE ET VIDE</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
