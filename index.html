@@ -26,7 +26,7 @@
 
     <!-- Navigation Header -->
     <header class="nav-header">
-      <button class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" data-cursor="SILENT">
+      <button class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <span class="brand-title">SILENT</span>
         <span class="brand-sub" data-i18n="nav.sub">DISAPPEARANCE ARCHIVE</span>
       </button>
@@ -49,7 +49,7 @@
         </div>
 
         <!-- Ambient Sound Toggle -->
-        <button id="sound-trigger" class="sound-trigger" data-cursor="AUDIO" title="Atmospheric Drone Sound">
+        <button id="sound-trigger" class="sound-trigger" title="Atmospheric Drone Sound">
           <span class="sound-bars">
             <span class="sound-bar"></span>
             <span class="sound-bar"></span>
@@ -59,7 +59,7 @@
         </button>
 
         <!-- Private Drawer Trigger -->
-        <button id="drawer-trigger" class="drawer-trigger" data-cursor="DRAWER">
+        <button id="drawer-trigger" class="drawer-trigger">
           <span data-i18n="nav.drawer">DRAWER</span>
           <span id="drawer-count" class="drawer-badge">0</span>
         </button>
@@ -97,7 +97,7 @@
             <div style="font-size: 8px; opacity: 0.5; margin-top: 3px;" data-i18n="hero.restricted">RESTRICTED ALLOCATION</div>
           </div>
 
-          <button id="hero-scroll-btn" class="scroll-indicator" data-cursor="ENTER">
+          <button id="hero-scroll-btn" class="scroll-indicator">
             <span data-i18n="hero.explore">EXPLORE ARCHIVE</span>
             <span class="scroll-line"></span>
           </button>
@@ -168,7 +168,7 @@
 
         <!-- Spread 01: Full Body Model + Macro Textile Inset -->
         <div class="spread-row">
-          <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-05">
+          <div class="magazine-frame aspect-portrait" data-open-piece="sl-05">
             <img src="assets/editorial/silent_look01_model.jpg" alt="Look 01 — Destructed Silhouette" loading="lazy" />
             <div class="frame-gradient"></div>
             <div class="frame-caption">
@@ -178,7 +178,7 @@
                 </span>
                 <h4 data-i18n="lookbook.look1Title">LOOK 01 — DESTRUCTED SILHOUETTE</h4>
               </div>
-              <button class="frame-btn" data-cursor="INSPECT" data-i18n="lookbook.look1Btn">INSPECT FIT [SL-05]</button>
+              <button class="frame-btn" data-i18n="lookbook.look1Btn">INSPECT FIT [SL-05]</button>
             </div>
           </div>
 
@@ -196,7 +196,7 @@
             </div>
 
             <!-- Macro Detail Inset -->
-            <div class="macro-detail-container" data-cursor="TEXTILE" data-open-piece="sl-03">
+            <div class="macro-detail-container" data-open-piece="sl-03">
               <div style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--color-ash); text-transform: uppercase; margin-bottom: 0.5rem; text-align: right;" data-i18n="lookbook.look2Fig">
                 FIG. 02 — SELVEDGE &amp; D-RING
               </div>
@@ -222,12 +222,12 @@
             <p class="editorial-text" style="padding-left: 0; margin-bottom: 2rem;" data-i18n="lookbook.look3Quote">
               The cross is stripped of dogmatic weight; transformed into a talisman of silence and contained defiance, screenprinted in tonal charcoal pigment discharge.
             </p>
-            <button class="frame-btn" data-cursor="INSPECT" data-open-piece="sl-01" style="align-self: flex-start;" data-i18n="lookbook.look3Btn">
+            <button class="frame-btn" data-open-piece="sl-01" style="align-self: flex-start;" data-i18n="lookbook.look3Btn">
               VIEW ARCHIVE SPEC [SL-01]
             </button>
           </div>
 
-          <div class="magazine-frame aspect-portrait" data-cursor="EXPAND" data-open-piece="sl-01">
+          <div class="magazine-frame aspect-portrait" data-open-piece="sl-01">
             <img src="assets/editorial/silent_look02_editorial.jpg" alt="Look 03 — Heraldic Occult Intarsia" loading="lazy" />
             <div class="frame-gradient"></div>
             <div class="frame-caption">
@@ -237,7 +237,7 @@
                 </span>
                 <h4 data-i18n="lookbook.look3Name">LOOK 03 — HERALDIC OCCULT INTARSIA</h4>
               </div>
-              <button class="frame-btn" data-cursor="REVEAL" data-i18n="lookbook.look3Reveal">REVEAL PIECE</button>
+              <button class="frame-btn" data-i18n="lookbook.look3Reveal">REVEAL PIECE</button>
             </div>
           </div>
         </div>
@@ -256,16 +256,16 @@
           </div>
 
           <div class="archive-filter-bar">
-            <button class="filter-btn active" data-filter="ALL" data-cursor="FILTER" data-i18n="archive.filterAll">COMPLETE ARCHIVE</button>
-            <button class="filter-btn" data-filter="DROP 001" data-cursor="FILTER" data-i18n="archive.filterDrop1">DROP 001</button>
-            <button class="filter-btn" data-filter="DROP 002" data-cursor="FILTER" data-i18n="archive.filterDrop2">DROP 002</button>
+            <button class="filter-btn active" data-filter="ALL" data-i18n="archive.filterAll">COMPLETE ARCHIVE</button>
+            <button class="filter-btn" data-filter="DROP 001" data-i18n="archive.filterDrop1">DROP 001</button>
+            <button class="filter-btn" data-filter="DROP 002" data-i18n="archive.filterDrop2">DROP 002</button>
           </div>
         </div>
 
         <!-- 3-Column Asymmetric Staggered Grid -->
         <div class="archive-grid">
           <!-- Card 1: SL-01 -->
-          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-01" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-01">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 001</span>
@@ -289,7 +289,7 @@
           </article>
 
           <!-- Card 2: SL-02 -->
-          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-02" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-02">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 001</span>
@@ -313,7 +313,7 @@
           </article>
 
           <!-- Card 3: SL-03 -->
-          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-03" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-03">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 001</span>
@@ -337,7 +337,7 @@
           </article>
 
           <!-- Card 4: SL-04 -->
-          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-04" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-04">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 002</span>
@@ -361,7 +361,7 @@
           </article>
 
           <!-- Card 5: SL-05 -->
-          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-05" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 002" data-open-piece="sl-05">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 002</span>
@@ -385,7 +385,7 @@
           </article>
 
           <!-- Card 6: SL-06 -->
-          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-06" data-cursor="REVEAL">
+          <article class="archive-card" data-drop="DROP 001" data-open-piece="sl-06">
             <div class="card-image-box">
               <div class="card-badge">
                 <span class="badge-drop">DROP 001</span>
@@ -423,7 +423,7 @@
     <!-- 5. Archival Piece Inspector Modal -->
     <div id="piece-modal" class="modal-overlay" role="dialog" aria-modal="true">
       <div class="modal-window">
-        <button id="modal-close-btn" class="modal-close-btn" data-cursor="CLOSE" data-i18n="modal.close">[ ESC / CLOSE ]</button>
+        <button id="modal-close-btn" class="modal-close-btn" data-i18n="modal.close">[ ESC / CLOSE ]</button>
 
         <div class="modal-left">
           <div class="modal-main-image-box">
@@ -487,7 +487,7 @@
             </div>
           </div>
 
-          <button id="modal-acquire-btn" class="modal-acquire-btn" data-cursor="ACQUIRE" data-i18n="modal.acquireBtn">
+          <button id="modal-acquire-btn" class="modal-acquire-btn" data-i18n="modal.acquireBtn">
             REQUEST PIECE ALLOCATION
           </button>
         </div>
@@ -504,7 +504,7 @@
             </span>
             <h3 class="drawer-title" data-i18n="drawer.title">THE PRIVATE DRAWER</h3>
           </div>
-          <button id="drawer-close-btn" style="background: none; border: none; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-cursor="CLOSE" data-i18n="drawer.close">
+          <button id="drawer-close-btn" style="background: none; border: none; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--color-ash); text-transform: uppercase;" data-i18n="drawer.close">
             [ CLOSE ]
           </button>
         </div>
@@ -535,7 +535,7 @@
             * INCLUDES INSURED PRIVATE COURIER DIRECT FROM PARIS ATELIER.
           </p>
 
-          <button id="drawer-checkout-btn" class="drawer-checkout-btn" data-cursor="CONFIRM" data-i18n="drawer.checkoutBtn">
+          <button id="drawer-checkout-btn" class="drawer-checkout-btn" data-i18n="drawer.checkoutBtn">
             CONFIRM PRIVATE ACQUISITION
           </button>
         </div>

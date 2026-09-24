@@ -946,63 +946,6 @@
     }
   }
 
-  // --- Dynamic Haute-Couture Interactive Cursor ---
-  function initCustomCursor() {
-    const isFinePointer = window.matchMedia('(pointer: fine)').matches;
-    if (!isFinePointer) return;
-
-    const dot = document.createElement('div');
-    dot.className = 'cursor-dot';
-
-    const follower = document.createElement('div');
-    follower.className = 'cursor-follower';
-
-    const textSpan = document.createElement('span');
-    textSpan.className = 'cursor-text';
-    follower.appendChild(textSpan);
-
-    document.body.appendChild(dot);
-    document.body.appendChild(follower);
-
-    let mouseX = -100, mouseY = -100;
-    let followerX = -100, followerY = -100;
-
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-
-      const target = e.target;
-      const cursorTarget = target.closest('[data-cursor]');
-      if (cursorTarget) {
-        const text = cursorTarget.getAttribute('data-cursor') || '';
-        textSpan.textContent = text;
-        follower.classList.add('has-text');
-        follower.classList.add('hovered');
-      } else {
-        const isInteractive = target.closest('a, button, input, [role="button"]');
-        if (isInteractive) {
-          textSpan.textContent = '';
-          follower.classList.remove('has-text');
-          follower.classList.add('hovered');
-        } else {
-          textSpan.textContent = '';
-          follower.classList.remove('has-text');
-          follower.classList.remove('hovered');
-        }
-      }
-    });
-
-    // Smooth follower interpolation loop
-    function animateFollower() {
-      followerX += (mouseX - followerX) * 0.16;
-      followerY += (mouseY - followerY) * 0.16;
-      follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
-      requestAnimationFrame(animateFollower);
-    }
-    requestAnimationFrame(animateFollower);
-  }
-
   // --- Archival Piece Inspector Modal ---
   function openPieceModal(pieceId) {
     const piece = ARCHIVE_DATA[pieceId];
@@ -1065,7 +1008,6 @@
     piece.images.forEach((imgSrc, idx) => {
       const btn = document.createElement('button');
       btn.className = `thumb-btn ${idx === 0 ? 'active' : ''}`;
-      btn.setAttribute('data-cursor', 'VIEW');
       btn.innerHTML = `<img src="${imgSrc}" alt="thumb">`;
       btn.addEventListener('click', () => {
         mainImg.style.opacity = '0';
@@ -1175,7 +1117,7 @@
             <div class="drawer-item-title">${pName}</div>
             <div class="drawer-item-meta">${I18N[currentLang].drawer.sizeLabel} ${item.size}</div>
           </div>
-          <button class="drawer-item-dismiss" data-idx="${idx}" data-cursor="DISMISS">${I18N[currentLang].drawer.dismiss}</button>
+          <button class="drawer-item-dismiss" data-idx="${idx}">${I18N[currentLang].drawer.dismiss}</button>
         </div>
       `;
       row.querySelector('.drawer-item-dismiss').addEventListener('click', () => removeFromCart(idx));
@@ -1233,7 +1175,6 @@
 
   // --- Document Initialization ---
   document.addEventListener('DOMContentLoaded', () => {
-    initCustomCursor();
     initArchiveFilters();
 
     // Initialize Language (default or stored)
