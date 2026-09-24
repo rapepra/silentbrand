@@ -10,6 +10,7 @@
   const I18N = {
     en: {
       nav: {
+        zine: "TOMO 001 [ZINE]",
         sub: "DISAPPEARANCE ARCHIVE",
         issue: "ISSUE 001 — VOID & MATTER",
         audioOn: "AUDIO [ON]",
@@ -109,6 +110,7 @@
         desc: "AN INDEPENDENT ATELIER EXPLORING THE BOUNDARIES OF HIGH COUTURE BRUTALISM, OBSIDIAN TEXTILES, AND TOTAL ANONYMITY.",
         locations: "PHYSICAL LOCATIONS",
         transmissions: "TRANSMISSIONS",
+        digitalArchive: "DIGITAL ARCHIVE:",
         privateComms: "PRIVATE COMMUNICATIONS:",
         encryptedDispatch: "ENCRYPTED DISPATCH:",
         currencyReg: "CURRENCY REGISTER",
@@ -119,6 +121,54 @@
         vault: "VAULT ACCESS",
         issueNote: "ISSUE 001 / MATIÈRE ET VIDE"
       },
+      zine: {
+        "cardTag": "TOMO 001 · MONOGRAPH PREVIEW",
+        "cardHeadline": "FROM SACRED VAULT TO CULT ARTIFACT",
+        "cardBody": "The foundational print manifesto physically embedded within Specimen 001. A dissection of the historic origin of couture archives, the late-90s collector phenomenon (Raf Simons, Helmut Lang, Margiela), and the tactile sensory armor of the first garment.",
+        "openBtn": "READ TOMO 001 PREVIEW [DIGITAL ZINE] ↗",
+        "physicalNote": "* THE FULL 64-PAGE PRINTED MONOGRAPH ON FEDRIGONI PAPER IS EMBEDDED INSIDE THE FIRST GARMENT.",
+        "modalHeader": "TOMO 001: GENESIS & ANATOMY",
+        "prev": "← PREV",
+        "next": "NEXT →",
+        "close": "[ ESC / CLOSE ]",
+        "s1PageLHeader": "CAPSULE 01 // GENEALOGY",
+        "s1LSub": "FROM PAPER STORAGE TO SACRED VAULT",
+        "s1LTitle": "The Sanctuary of Memory",
+        "s1LLead": "In the origin of haute couture, archives served as the armored vault where historical houses guarded prototypes, master patterns, and founder garments.",
+        "s1LBody1": "They were never commercial warehouses; they were sanctuaries of technical preservation. Within them lay the physical proof of silhouettes that must never be cheapened or mass-reproduced. Every pattern embodied years of volumetric tension and drape.",
+        "s1LQuote": "“The archive is both tomb and altar: shielding the garment from ephemeral trends and the invasive gaze.”",
+        "s1PageRHeader": "CAPSULE 02 // CULT",
+        "s1RSub": "THE PHENOMENON OF ATEMPORAL COLLECTING",
+        "s1RTitle": "The 90s & 2000s Rupture",
+        "s1RBody1": "In the late 90s and early 2000s, iconoclasts like Raf Simons, Helmut Lang, and Martin Margiela transformed garments into sacred cult artifacts.",
+        "s1RBody2": "Clothing ceased to be disposable fast-consumption. Wearing an archive piece became an act of cultural custody and quiet defiance.",
+        "s1RBody3": "Today, 'Archive' in silent.arch1ves denotes an oath of permanence. We do not manufacture seasonal fashion; we sculpt specimens built to outlive the era.",
+        "s2PageLHeader": "CAPSULE 03 // GENESIS",
+        "s2LSub": "THE FIRST PIECE (SPECIMEN 001)",
+        "s2LTitle": "Why We Created This Garment",
+        "s2LLead": "Specimen 001 was born as an indictment against algorithmic visibility and the flimsy insignificance of fast fashion.",
+        "s2LBody1": "We reject the t-shirt as a billboard for logos. This garment was engineered as architectural shelter: 320 GSM dense dual-faced cotton, anatomical curvilinear thoracic seams, and reinforced contours designed to withstand decades.",
+        "s2LBody2": "We built it because we required armor that demands no validation, seeks no social media praise, and restores weight, solemnity, and silence to dress.",
+        "s2PageRHeader": "CAPSULE 04 // HAPTICS",
+        "s2RSub": "THE PHYSICAL SENSATION",
+        "s2RTitle": "What It Feels Like to Wear",
+        "s2RLead": "Passing your arms through the anatomical sleeves alters your perception of gravity immediately.",
+        "s2RBody1": "The density of compact cotton settles across your clavicles with tactile reassurance, cushioning against urban chaos. Posture straightens naturally; shoulders align, speech slows.",
+        "s2RBody2": "The reverse tonal charcoal discharge cross is not decorative insignia; it is a private talisman solely for those who understand the luxury of disappearance.",
+        "s2RQuote": "“You do not dress to be observed by strangers. You construct armor to find yourself.”",
+        "s3PageLHeader": "CAPSULE 05 // UNBOXING RITUAL",
+        "s3LSub": "THE PHYSICAL ARCHIVE PUBLICATION",
+        "s3LTitle": "The Printed Tome in Your Hands",
+        "s3LLead": "This digital preview is merely a prologue. The complete work exists as a tangible collector artifact.",
+        "s3LBody1": "The physical Tomo 001 is a hand-bound 64-page monograph with exposed Singer stitch, printed on 120 GSM Fedrigoni Sirio Black uncoated paper with metallic silver pigments and tactile varnishes.",
+        "s3LBody2": "Each physical copy is hand-numbered by the atelier and sealed exclusively inside the packaging of the first numbered garment.",
+        "s3PageRHeader": "PAGES 07 TO 48 // REDACTED",
+        "s3RSub": "CONFIDENTIAL ATELIER ARCHIVE",
+        "s3RTitle": "Secret Patterns & Classified Notes",
+        "lockTitle": "CONTENT VAULT RESTRICTED",
+        "lockDesc": "Cutting patterns, loom coordinates, and unseen campaign film plates are sealed physically within the garment packaging.",
+        "unlockBtn": "ALLOCATE SPECIMEN 001 [UNBOX PHYSICAL ISSUE]"
+},
       pieces: {
         'sl-01': {
           name: "ANATOMICAL CURVED-SEAM TEE",
@@ -161,6 +211,7 @@
 
     es: {
       nav: {
+        zine: "TOMO 001 [ZINE]",
         sub: "ARCHIVO DE DESAPARICIÓN",
         issue: "EDICIÓN 001 — VACÍO Y MATERIA",
         audioOn: "AUDIO [ACTIVO]",
@@ -260,6 +311,7 @@
         desc: "ATELIER INDEPENDIENTE QUE EXPLORA LOS LÍMITES DEL BRUTALISMO DE ALTA COSTURA, LOS TEXTILES OBSIDIANA Y EL ANONIMATO TOTAL.",
         locations: "UBICACIONES FÍSICAS",
         transmissions: "TRANSMISIONES",
+        digitalArchive: "ARCHIVO DIGITAL:",
         privateComms: "COMUNICACIONES PRIVADAS:",
         encryptedDispatch: "DESPACHO ENCRIPTADO:",
         currencyReg: "REGISTRO DE DIVISAS",
@@ -270,6 +322,54 @@
         vault: "ACCESO A BÓVEDA",
         issueNote: "EDICIÓN 001 / MATIÈRE ET VIDE"
       },
+      zine: {
+        "cardTag": "TOMO 001 · ADELANTO MONOGRÁFICO",
+        "cardHeadline": "DE LA CÁMARA ACORAZADA AL OBJETO DE CULTO",
+        "cardBody": "El manifiesto fundacional que acompaña físicamente al Espécimen 001. Una disección sobre el origen histórico de los archives de alta costura, el coleccionismo atemporal (Raf Simons, Helmut Lang, Margiela) y la anatomía táctil de la primera prenda.",
+        "openBtn": "LEER ADELANTO DEL TOMO 001 [DIGITAL ZINE] ↗",
+        "physicalNote": "* LA EDICIÓN COMPLETA IMPRESA EN PAPEL FEDRIGONI SE INCLUYE DENTRO DE LA PRIMERA PRENDA.",
+        "modalHeader": "TOMO 001: GENESIS & ANATOMY",
+        "prev": "← ANTERIOR",
+        "next": "SIGUIENTE →",
+        "close": "[ ESC / CERRAR ]",
+        "s1PageLHeader": "CÁPSULA 01 // GENEALOGÍA",
+        "s1LSub": "DE DEPÓSITO DE PAPELES A CÁMARA ACORAZADA",
+        "s1LTitle": "El Santuario de la Memoria",
+        "s1LLead": "En el origen de la alta costura, los archives eran la cámara acorazada donde las casas históricas custodiaban prototipos, patrones maestros y prendas icónicas de sus fundadores.",
+        "s1LBody1": "No eran simples almacenes comerciales; eran templos de preservación técnica. En ellos se guardaba la evidencia física de siluetas que jamás debían vulgarizarse ni reproducirse masivamente. Cada patrón contenía años de investigación de volumen, caída y tensión textil.",
+        "s1LQuote": "“El archivo es la tumba y el altar del diseño: protege la prenda del paso del tiempo y de la mirada indiscriminada.”",
+        "s1PageRHeader": "CÁPSULA 02 // CULTO",
+        "s1RSub": "EL FENÓMENO DEL COLECCIONISMO ATEMPORAL",
+        "s1RTitle": "La Ruptura de los 90s & 2000s",
+        "s1RBody1": "A finales de los 90 y principios de los 2000, creadores iconoclastas como Raf Simons, Helmut Lang y Martin Margiela transformaron la prenda de vestir en una reliquia de culto.",
+        "s1RBody2": "La ropa dejó de ser un producto estacional de consumo rápido para convertirse en un objeto con valor histórico y atemporal. Vestir una pieza de archivo dejó de ser consumir moda: pasó a ser custodiar un fragmento de arte y rebelión.",
+        "s1RBody3": "Hoy, el término Archive en silent.arch1ves es un juramento de permanencia. No fabricamos colecciones efímeras; construimos especímenes con peso, dignidad y valor duradero.",
+        "s2PageLHeader": "CÁPSULA 03 // GÉNESIS",
+        "s2LSub": "LA PRIMERA PRENDA (ESPECÍMEN 001)",
+        "s2LTitle": "Por qué hemos hecho esta pieza",
+        "s2LLead": "Specimen 001 nace como un acto de impugnación directa contra la aceleración contemporánea y la delgadez miserable del fast-fashion.",
+        "s2LBody1": "Rechazamos la camiseta como soporte publicitario. Esta pieza fue concebida como un artefacto arquitectónico: hilado denso de 320 GSM, paneles curvilíneos frontales que reproducen la anatomía torácica y costuras reforzadas que desafían el desgaste.",
+        "s2LBody2": "La creamos porque necesitábamos una prenda que no pidiera disculpas, que no buscara ser aceptada en un feed de redes, y que devolviera al vestir el peso, la solemnidad y el silencio.",
+        "s2PageRHeader": "CÁPSULA 04 // HÁPTICA",
+        "s2RSub": "LA EXPERIENCIA CORPORAL",
+        "s2RTitle": "Qué se siente al vestirla",
+        "s2RLead": "Al introducir los brazos y dejar que la tela repose sobre las clavículas, el cuerpo experimenta una alteración inmediata de gravedad.",
+        "s2RBody1": "La densidad del algodón compacto ejerce una contención reconfortante, como una armadura textil que amortigua la sobreestimulación del entorno urbano. La postura se endereza de forma natural; los hombros se asientan, la mirada se serena.",
+        "s2RBody2": "La cruz heráldica trasera en descarga de pigmento al carbón y el monograma gótico sutil no buscan exhibirse; son talismanes íntimos para quien comprende el lujo de desaparecer.",
+        "s2RQuote": "“No te vistes para ser contemplado por extraños. Te blindas para encontrarte contigo mismo.”",
+        "s3PageLHeader": "CÁPSULA 05 // UNBOXING RITUAL",
+        "s3LSub": "LA PUBLICACIÓN FÍSICA DE ARCHIVO",
+        "s3LTitle": "El Tomo Impreso en tus Manos",
+        "s3LLead": "Esta muestra digital es solo el preludio. La obra completa existe como un objeto tangible de colección.",
+        "s3LBody1": "El Tomo 001 completo consta de una monografía de 64 páginas encuadernada a mano con cosido Singer, impresa sobre papel Fedrigoni Sirio Black mate de 120 gramos con tintas plateadas y barnices al tacto.",
+        "s3LBody2": "Cada ejemplar físico lleva su número de serie caligrafiado a mano por el taller, y se entrega sellado exclusivamente dentro del packaging de la primera prenda numerada.",
+        "s3PageRHeader": "PÁGINAS 07 A 48 // VELADO",
+        "s3RSub": "DOSSIER CONFIDENCIAL DE TALLER",
+        "s3RTitle": "Patrones & Secretos Reservados",
+        "lockTitle": "CONTENIDO CUSTODIADO EN CÁMARA ACORAZADA",
+        "lockDesc": "Los patrones de confección, coordenadas de telar y fotografías inéditas se encuentran selladas en la revista física dentro del packaging de la prenda.",
+        "unlockBtn": "ASIGNAR ESPECÍMEN 001 [DESBLOQUEAR REVISTA FÍSICA]"
+},
       pieces: {
         'sl-01': {
           name: "CAMISETA TÉCNICA DE COSTURA CURVA",
@@ -312,6 +412,7 @@
 
     fr: {
       nav: {
+        zine: "TOME 001 [ZINE]",
         sub: "ARCHIVE DE DISPARITION",
         issue: "NUMÉRO 001 — LE VIDE ET LA MATIÈRE",
         audioOn: "AUDIO [ACTIVÉ]",
@@ -411,6 +512,7 @@
         desc: "ATELIER INDÉPENDANT EXPLORANT LES CONFINS DU BRUTALISME HAUTE COUTURE, DES TEXTILES OBSIDIENNE ET DE L'ANONYMAT TOTAL.",
         locations: "EMPLACEMENTS PHYSIQUES",
         transmissions: "TRANSMISSIONS",
+        digitalArchive: "ARCHIVE NUMÉRIQUE :",
         privateComms: "COMMUNICATIONS PRIVÉES :",
         encryptedDispatch: "TRANSMISSION CHIFFRÉE :",
         currencyReg: "REGISTRE DES DEVISES",
@@ -421,6 +523,54 @@
         vault: "ACCÈS CHAMBRE FORTE",
         issueNote: "NUMÉRO 001 / MATIÈRE ET VIDE"
       },
+      zine: {
+        "cardTag": "TOME 001 · APERÇU MONOGRAPHIQUE",
+        "cardHeadline": "DE LA CHAMBRE FORTE À L'OBJET DE CULTE",
+        "cardBody": "Le manifeste inaugural physiquement scellé au sein du Spécimen 001. Une dissection de l'origine historique des archives de haute couture, du culte des collectionneurs (Raf Simons, Helmut Lang, Margiela) et de l'armure tactile du premier vêtement.",
+        "openBtn": "LIRE L'APERÇU DU TOME 001 [ZINE NUMÉRIQUE] ↗",
+        "physicalNote": "* L'ÉDITION IMPRIMÉE COMPLÈTE SUR PAPIER FEDRIGONI EST INCLUSE DANS LE PREMIER VÊTEMENT.",
+        "modalHeader": "TOME 001 : GENESIS & ANATOMY",
+        "prev": "← PRÉCÉDENT",
+        "next": "SUIVANT →",
+        "close": "[ ESC / FERMER ]",
+        "s1PageLHeader": "CAPSULE 01 // GÉNÉALOGIE",
+        "s1LSub": "DU DÉPÔT DE PATRONS À LA CHAMBRE FORTE",
+        "s1LTitle": "Le Sanctuaire de la Mémoire",
+        "s1LLead": "À l'origine de la haute couture, les archives étaient la chambre forte où les maisons historiques gardaient précieusement prototypes, patrons maîtres et pièces fondatrices.",
+        "s1LBody1": "Elles n'étaient pas de vulgaires entrepôts marchands ; elles étaient des sanctuaires de conservation technique protégeant des silhouettes qui ne devaient jamais être bradées ni reproduites en masse.",
+        "s1LQuote": "« L'archive est le tombeau et l'autel du vêtement : elle le soustrait à l'éphémère et au regard indiscret. »",
+        "s1PageRHeader": "CAPSULE 02 // CULTE",
+        "s1RSub": "LE PHÉNOMÈNE DU COLLECTIONNISME ATEMPOREL",
+        "s1RTitle": "La Rupture des Années 90 & 2000",
+        "s1RBody1": "À la fin des années 90 et au début des années 2000, des créateurs iconoclastes comme Raf Simons, Helmut Lang et Martin Margiela ont mué le vêtement en relique de culte.",
+        "s1RBody2": "La pièce de mode cessa d'être un consommable saisonnier pour devenir un artefact historique. Porter une pièce d'archive devint un acte de fidélité culturelle et de résistance intime.",
+        "s1RBody3": "Aujourd'hui, chez silent.arch1ves, le mot Archive est une promesse d'immortalité. Nous ne fabriquons pas de collections éphémères ; nous bâtissons des spécimens d'exception.",
+        "s2PageLHeader": "CAPSULE 03 // GENÈSE",
+        "s2LSub": "LE PREMIER VÊTEMENT (SPÉCIMEN 001)",
+        "s2LTitle": "Pourquoi Nous Avons Créé Cette Pièce",
+        "s2LLead": "Le Spécimen 001 est un acte d'insoumission absolue face à l'accélération numérique et à la précarité textile de la fast-fashion.",
+        "s2LBody1": "Nous rejetons le tee-shirt réduit à un support promotionnel. Cette pièce a été sculptée comme un abri architectural : 320 GSM de coton compact double-face et découpes curvilignes anatomiques.",
+        "s2LBody2": "Nous l'avons conçue pour offrir un vêtement qui ne s'excuse jamais, qui ne mendie aucun like, et qui redonne au corps le poids, la solennité et le silence.",
+        "s2PageRHeader": "CAPSULE 04 // HAPTIQUE",
+        "s2RSub": "L'EXPÉRIENCE CORPORELLE",
+        "s2RTitle": "Ce Que L'On Éprouve En L'Enfilant",
+        "s2RLead": "Glisser ses bras dans les manches anatomiques modifie instantanément le rapport à la gravité.",
+        "s2RBody1": "Le poids dense du coton compact s'ancre sur les clavicules et les épaules avec une autorité protectrice. La posture se redresse naturellement ; le regard s'apaise.",
+        "s2RBody2": "La croix herse au dos en décharge pigmentaire charbon n'est pas un insigne publicitaire ; c'est un talisman intime pour ceux qui cultivent le luxe de disparaître.",
+        "s2RQuote": "« On ne s'habille pas pour être dévisagé par autrui. On s'arme pour revenir à soi. »",
+        "s3PageLHeader": "CAPSULE 05 // RITUEL PHYSIQUE",
+        "s3LSub": "LA PUBLICATION PHYSIQUE D'ARCHIVE",
+        "s3LTitle": "Le Tome Imprimé Entre Vos Mains",
+        "s3LLead": "Cet aperçu digital n'est qu'un prologue. L'œuvre intégrale existe sous forme d'artefact palpable de collection.",
+        "s3LBody1": "Le Tome 001 complet est une monographie de 64 pages reliée à la main avec piqûre Singer apparente, imprimée sur papier Fedrigoni Sirio Black mat 120 g aux encres argentées et vernis sélectifs.",
+        "s3LBody2": "Chaque volume est numéroté à la main au sein de notre atelier et scellé exclusivement dans le packaging du premier vêtement.",
+        "s3PageRHeader": "PAGES 07 À 48 // CENSURÉ",
+        "s3RSub": "DOSSIER CONFIDENTIEL DE L'ATELIER",
+        "s3RTitle": "Patrons Secrets & Notes Réservées",
+        "lockTitle": "CONTENU CONSERVÉ EN CHAMBRE FORTE",
+        "lockDesc": "Les patrons de coupe, coordonnées d'ateliers et planches photographiques inédites sont scellés dans le livret physique au sein du packaging.",
+        "unlockBtn": "RÉSERVER LE SPÉCIMEN 001 [DÉBLOQUER LA REVUE PHYSIQUE]"
+},
       pieces: {
         'sl-01': {
           name: "T-SHIRT ANATOMIQUE À COUTURES COURBES",
@@ -463,6 +613,7 @@
 
     ja: {
       nav: {
+        zine: "第一巻 [ZINE]",
         sub: "消失のアーカイヴ",
         issue: "創刊第001号 — 虚無と物質",
         audioOn: "音響 [作動]",
@@ -562,6 +713,7 @@
         desc: "ハイファッションのブルータリズム、漆黒のテキスタイル、完全なる匿名性の境界を探求する独立アトリエ。",
         locations: "実体工房",
         transmissions: "通信回線",
+        digitalArchive: "電脳記録保管庫:",
         privateComms: "私的連絡先:",
         encryptedDispatch: "暗号化交信:",
         currencyReg: "決済通貨設定",
@@ -572,6 +724,54 @@
         vault: "金庫アクセス",
         issueNote: "第001号 / 虚無と物質"
       },
+      zine: {
+        "cardTag": "第一巻 · 創刊概要記録",
+        "cardHeadline": "機密保管庫から崇拝される遺物へ",
+        "cardBody": "第一号衣服（標本001）の包装内に物理的に厳封される創刊宣言書。オートクチュール・アーカイブの歴史的起源、90年代〜2000年代のカルト的収集現象（ラフ・シモンズ、ヘルムート・ラング、マルジェラ）、そして最初の衣服がもたらす物理的装甲体験の解剖。",
+        "openBtn": "第一巻の試読を開始する [デジタルZINE] ↗",
+        "physicalNote": "* フェドリゴーニ黒マット紙に印刷された全64頁の実物小冊子は、最初の衣服の中に厳封同梱されます。",
+        "modalHeader": "第一巻：起源と解剖学 (GENESIS & ANATOMY)",
+        "prev": "← 前へ",
+        "next": "次へ →",
+        "close": "[ ESC / 閉じる ]",
+        "s1PageLHeader": "分類 01 // 系譜",
+        "s1LSub": "書類保管所から鋼鉄の金庫へ",
+        "s1LTitle": "記憶の聖域",
+        "s1LLead": "オートクチュールの黎明期、アーカイブとは創業者の試作型、マスターパターン、象徴的衣服を厳重に保管する「耐火金庫」でした。",
+        "s1LBody1": "それらは商業的倉庫ではなく、技術保存の神殿でした。決して大衆化されず、大量生産に屈しないシルエットの物理的証拠がそこに眠っていました。",
+        "s1LQuote": "「アーカイブは衣服の墓標であり祭壇である。消費の加速と無遠慮な視線から衣服を隔離保護する。」",
+        "s1PageRHeader": "分類 02 // カルト",
+        "s1RSub": "時を超越した収集現象",
+        "s1RTitle": "90年代と2000年代の地殻変動",
+        "s1RBody1": "90年代後半から2000年代初頭にかけて、ラフ・シモンズ、ヘルムート・ラング、マルタン・マルジェラといった異端の創作者たちが衣服を「崇拝される聖遺物」へと変貌させました。",
+        "s1RBody2": "衣服はもはや使い捨ての消費物ではなくなりました。アーカイブを身に纏うことは、文化と反逆の断片を自らの身に引き受ける儀式となったのです。",
+        "s1RBody3": "今、silent.arch1vesにおける「Archive」とは永遠への誓約です。私たちは消費される服を作らず、時を生き抜く標本を構築します。",
+        "s2PageLHeader": "分類 03 // 起源",
+        "s2LSub": "最初の衣服（標本 001）",
+        "s2LTitle": "なぜこの衣服を創ったのか",
+        "s2LLead": "標本001（Specimen 001）は、現代のアルゴリズム的過剰露出とファストファッションの軽薄さに対する直接の異議申し立てとして生まれました。",
+        "s2LBody1": "私たちはロゴを誇示するための広告板としての服を拒絶します。この衣服は建築的避難所として設計されました。320 GSMの高密度両面編みコットン、胸郭の筋肉構造に追従する曲線パネル、耐久性を極めた立体縫製。",
+        "s2LBody2": "承認を求めず、SNSの称賛に媚びず、衣服本来の重量、荘厳さ、そして沈黙を取り戻すために創られました。",
+        "s2PageRHeader": "分類 04 // 触覚",
+        "s2RSub": "肉体的な着用体験",
+        "s2RTitle": "身に纏う瞬間の感覚",
+        "s2RLead": "袖を通し、生地が鎖骨と両肩に載った瞬間、重力の重心が変わるような感覚を覚えます。",
+        "s2RBody1": "緻密に詰まったコットンの重量が、都市の過剰な喧騒を遮断する防護甲冑のように身体を優しく包み込みます。背筋は自然と伸び、肩の力が抜け、静寂が訪れます。",
+        "s2RBody2": "背面の木炭顔料抜染による十字紋章は装飾ではありません。それは「消失の贅沢」を理解する者同士の密やかな合言葉です。",
+        "s2RQuote": "「他者に見せつけるために纏うのではない。自らと再び対峙するために装甲を纏うのだ。」",
+        "s3PageLHeader": "分類 05 // 開封の儀",
+        "s3LSub": "物理的出版物",
+        "s3LTitle": "手の中に宿る実物の書物",
+        "s3LLead": "このデジタル試読は序章に過ぎません。完全な作品は、手で触れられる実物の美術本として存在します。",
+        "s3LBody1": "実物の第一巻は、フェドリゴーニ社製120gブラックマット紙に銀色インクと特殊ニスで刷り上げられ、職人の手によるシンガーミシン製本で仕上げられた全64頁の特装本です。",
+        "s3LBody2": "工房で一冊ずつ手書きで個体番号が記入され、最初の衣服の包装内にのみ厳封同梱されます。",
+        "s3PageRHeader": "第07頁〜48頁 // 閲覧制限",
+        "s3RSub": "工房極秘調書",
+        "s3RTitle": "型紙と未公開記録",
+        "lockTitle": "金庫内保管・アクセス制限",
+        "lockDesc": "パターン裁断図、岡山児島工房の緯糸記録、未公開フィルム写真は、衣服のパッケージ内に物理的に封印されています。",
+        "unlockBtn": "標本001を私的割当する [実物本を開封]"
+},
       pieces: {
         'sl-01': {
           name: "解剖学的曲線裁断Tシャツ",
@@ -946,6 +1146,61 @@
     }
   }
 
+
+  // --- Tomo 001 Genesis Monograph Reader ---
+  let currentZineSpread = 1;
+  const TOTAL_ZINE_SPREADS = 3;
+
+  function openZineModal() {
+    const modal = document.getElementById('zine-modal');
+    if (!modal) return;
+    setZineSpread(1);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeZineModal() {
+    const modal = document.getElementById('zine-modal');
+    if (modal) modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function setZineSpread(num) {
+    if (num < 1) num = 1;
+    if (num > TOTAL_ZINE_SPREADS) num = TOTAL_ZINE_SPREADS;
+    currentZineSpread = num;
+
+    const modal = document.getElementById('zine-modal');
+    if (!modal) return;
+
+    modal.querySelectorAll('.zine-spread').forEach(spread => {
+      const spreadNum = parseInt(spread.getAttribute('data-spread'), 10);
+      spread.classList.toggle('active', spreadNum === currentZineSpread);
+    });
+
+    const counter = document.getElementById('zine-page-counter');
+    if (counter) {
+      counter.textContent = `SPREAD 0${currentZineSpread} / 0${TOTAL_ZINE_SPREADS}`;
+    }
+
+    const prevBtn = document.getElementById('zine-prev-btn');
+    const nextBtn = document.getElementById('zine-next-btn');
+    if (prevBtn) prevBtn.style.opacity = currentZineSpread === 1 ? '0.3' : '1';
+    if (nextBtn) nextBtn.style.opacity = currentZineSpread === TOTAL_ZINE_SPREADS ? '0.3' : '1';
+  }
+
+  function nextZineSpread() {
+    if (currentZineSpread < TOTAL_ZINE_SPREADS) {
+      setZineSpread(currentZineSpread + 1);
+    }
+  }
+
+  function prevZineSpread() {
+    if (currentZineSpread > 1) {
+      setZineSpread(currentZineSpread - 1);
+    }
+  }
+
   // --- Archival Piece Inspector Modal ---
   function openPieceModal(pieceId) {
     const piece = ARCHIVE_DATA[pieceId];
@@ -1258,6 +1513,45 @@
         }, 2200);
       });
     }
+
+    
+    // Zine Modal Triggers
+    const openZineBtn = document.getElementById('open-zine-btn');
+    const navZineBtn = document.getElementById('nav-zine-btn');
+    const closeZineBtn = document.getElementById('zine-close-btn');
+    const prevZineBtn = document.getElementById('zine-prev-btn');
+    const nextZineBtn = document.getElementById('zine-next-btn');
+    const zineAllocateBtn = document.getElementById('zine-allocate-specimen-btn');
+    const zineOverlay = document.getElementById('zine-modal');
+
+    if (openZineBtn) openZineBtn.addEventListener('click', openZineModal);
+    if (navZineBtn) navZineBtn.addEventListener('click', openZineModal);
+    if (closeZineBtn) closeZineBtn.addEventListener('click', closeZineModal);
+    if (prevZineBtn) prevZineBtn.addEventListener('click', prevZineSpread);
+    if (nextZineBtn) nextZineBtn.addEventListener('click', nextZineSpread);
+
+    if (zineOverlay) {
+      zineOverlay.addEventListener('click', (e) => {
+        if (e.target === zineOverlay) closeZineModal();
+      });
+    }
+
+    if (zineAllocateBtn) {
+      zineAllocateBtn.addEventListener('click', () => {
+        closeZineModal();
+        setTimeout(() => openPieceModal('sl-01'), 250);
+      });
+    }
+
+    // Keyboard navigation (Escape, ArrowLeft, ArrowRight)
+    window.addEventListener('keydown', (e) => {
+      const zineModal = document.getElementById('zine-modal');
+      if (zineModal && zineModal.classList.contains('active')) {
+        if (e.key === 'Escape') closeZineModal();
+        if (e.key === 'ArrowRight') nextZineSpread();
+        if (e.key === 'ArrowLeft') prevZineSpread();
+      }
+    });
 
     // ESC Key listener
     document.addEventListener('keydown', (e) => {

@@ -28,7 +28,7 @@
     <header class="nav-header">
       <button class="nav-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <span class="brand-title">SILENT</span>
-        <span class="brand-sub" data-i18n="nav.sub">DISAPPEARANCE ARCHIVE</span>
+        <span class="brand-sub">silent.arch1ves</span>
       </button>
 
       <div class="nav-center-issue">
@@ -47,6 +47,11 @@
           <span class="lang-divider">·</span>
           <button class="lang-btn" data-lang="ja">JA</button>
         </div>
+
+        <!-- Tomo 001 Genesis Monograph Trigger -->
+        <button id="nav-zine-btn" class="nav-zine-btn" title="Read Tomo 001 Genesis Monograph">
+          <span data-i18n="nav.zine">TOMO 001 [ZINE]</span>
+        </button>
 
         <!-- Ambient Sound Toggle -->
         <button id="sound-trigger" class="sound-trigger" title="Atmospheric Drone Sound">
@@ -142,6 +147,54 @@
         <div class="manifesto-footer">
           <span data-i18n="manifesto.foot1">NO ADVERTISING. NO SPONSORED GAZE.</span>
           <span data-i18n="manifesto.foot2">STRICT ALLOCATION OF 10 TO 24 PIECES PER DISCIPLINE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 Monograph Preview / Tomo 001: The Archive Genesis -->
+    <section id="monograph" class="monograph-section">
+      <div class="section-container">
+        <div class="monograph-card">
+          <div class="monograph-text-col">
+            <div class="monograph-meta-row">
+              <span class="monograph-tag" data-i18n="zine.cardTag">TOMO 001 · MONOGRAPH PREVIEW</span>
+              <span class="monograph-handle">@silent.arch1ves</span>
+            </div>
+            <h2 class="monograph-headline" data-i18n="zine.cardHeadline">
+              DE LA CÁMARA ACORAZADA AL OBJETO DE CULTO
+            </h2>
+            <p class="monograph-body" data-i18n="zine.cardBody">
+              El manifiesto fundacional que acompaña físicamente al Espécimen 001. Una disección sobre el origen histórico de los archives de alta costura, el coleccionismo atemporal (Raf Simons, Helmut Lang, Margiela) y la anatomía táctil de la primera prenda.
+            </p>
+            <div class="monograph-cta-row">
+              <button id="open-zine-btn" class="monograph-btn" data-i18n="zine.openBtn">
+                LEER ADELANTO DEL TOMO 001 [DIGITAL ZINE] ↗
+              </button>
+              <span class="monograph-footnote" data-i18n="zine.physicalNote">
+                * LA EDICIÓN COMPLETA IMPRESA EN PAPEL FEDRIGONI SE INCLUYE DENTRO DE LA PRIMERA PRENDA.
+              </span>
+            </div>
+          </div>
+          <div class="monograph-visual-col">
+            <div class="monograph-cover-object" onclick="document.getElementById('open-zine-btn').click()" title="Click to Read Tomo 001 Preview">
+              <div class="cover-stitch-line"></div>
+              <div class="cover-inner">
+                <div class="cover-top-meta">
+                  <span>SILENT ARCH1VES</span>
+                  <span>ISSUE 001</span>
+                </div>
+                <div class="cover-center-meta">
+                  <span class="cover-cross">†</span>
+                  <h3 class="cover-title">TOMO 001</h3>
+                  <p class="cover-subtitle">GENESIS &amp; ANATOMY</p>
+                </div>
+                <div class="cover-bottom-meta">
+                  <span>48.8566° N, 2.3522° E</span>
+                  <span>RESTRICTED ALLOCATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -569,7 +622,9 @@
               <span style="font-size: 8px; opacity: 0.5; display: block;" data-i18n="footer.privateComms">PRIVATE COMMUNICATIONS:</span>
               <a href="mailto:atelier@silent-archive.com" style="color: var(--color-bone); text-decoration: underline;">atelier@silent-archive.com</a><br/><br/>
               <span style="font-size: 8px; opacity: 0.5; display: block;" data-i18n="footer.encryptedDispatch">ENCRYPTED DISPATCH:</span>
-              <span>PGP KEY: 0x9F42B6A</span>
+              <span>PGP KEY: 0x9F42B6A</span><br/><br/>
+              <span style="font-size: 8px; opacity: 0.5; display: block;" data-i18n="footer.digitalArchive">DIGITAL ARCHIVE:</span>
+              <span style="color: var(--color-bone); font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.25em;">@silent.arch1ves</span>
             </p>
           </div>
 
@@ -588,7 +643,7 @@
         </div>
 
         <div class="footer-bottom-row">
-          <div data-i18n="footer.copyright">© 2026 SILENT ARCHIVE. ALL PATTERNS &amp; DESIGNS COPYRIGHT PROTECTED.</div>
+          <div data-i18n="footer.copyright">© 2026 SILENT ARCH1VES. ALL PATTERNS &amp; DESIGNS COPYRIGHT PROTECTED.</div>
           <div style="display: flex; gap: 1.5rem;">
             <span data-i18n="footer.privacy">PRIVACY PROTOCOL</span>
             <span data-i18n="footer.terms">TERMS OF DISAPPEARANCE</span>
@@ -598,5 +653,219 @@
         </div>
       </div>
     </footer>
+
+    <!-- 8. Interactive Zine Reader Modal (Tomo 001 Preview) -->
+    <div id="zine-modal" class="zine-modal-overlay" role="dialog" aria-modal="true">
+      <div class="zine-modal-window">
+        <!-- Zine Reader Top Control Bar -->
+        <header class="zine-nav-header">
+          <div class="zine-nav-brand">
+            <span class="zine-brand-title">SILENT ARCH1VES</span>
+            <span class="zine-brand-sep">/</span>
+            <span class="zine-brand-issue" data-i18n="zine.modalHeader">TOMO 001: GENESIS &amp; ANATOMY</span>
+          </div>
+
+          <div class="zine-nav-controls">
+            <button id="zine-prev-btn" class="zine-nav-arrow" title="Previous Spread" data-i18n="zine.prev">
+              ← PREV
+            </button>
+            <span id="zine-page-counter" class="zine-page-counter">
+              SPREAD 01 / 03
+            </span>
+            <button id="zine-next-btn" class="zine-nav-arrow" title="Next Spread" data-i18n="zine.next">
+              NEXT →
+            </button>
+          </div>
+
+          <button id="zine-close-btn" class="zine-close-btn" title="Close Zine" data-i18n="zine.close">
+            [ ESC / CLOSE ]
+          </button>
+        </header>
+
+        <!-- Zine Spreads Container -->
+        <div class="zine-content-body">
+          <!-- SPREAD 01: EL ORIGEN DEL ARCHIVE & EL COLECCIONISMO -->
+          <article class="zine-spread active" data-spread="1">
+            <div class="zine-page zine-page-left">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s1PageLHeader">CÁPSULA 01 // GENEALOGÍA</span>
+                <span>PAG. 02</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s1LSub">DE DEPÓSITO DE PAPELES A CÁMARA ACORAZADA</span>
+                <h3 class="zine-page-title" data-i18n="zine.s1LTitle">El Santuario de la Memoria</h3>
+                <p class="zine-text-lead" data-i18n="zine.s1LLead">
+                  En el origen de la alta costura, los archives eran la cámara acorazada donde las casas históricas custodiaban prototipos, patrones maestros y prendas icónicas de sus fundadores.
+                </p>
+                <p class="zine-text" data-i18n="zine.s1LBody1">
+                  No eran simples almacenes comerciales; eran templos de preservación técnica. En ellos se guardaba la evidencia física de siluetas que jamás debían vulgarizarse ni reproducirse masivamente. Cada patrón contenía años de investigación de volumen, caída y tensión textil.
+                </p>
+                <div class="zine-quote-box">
+                  <p class="zine-quote" data-i18n="zine.s1LQuote">
+                    “El archivo es la tumba y el altar del diseño: protege la prenda del paso del tiempo y de la mirada indiscriminada.”
+                  </p>
+                </div>
+              </div>
+              <div class="zine-page-footer">
+                <span>SILENT ARCH1VES</span>
+                <span>DOSSIER CONFIDENCIAL</span>
+              </div>
+            </div>
+
+            <div class="zine-page zine-page-right">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s1PageRHeader">CÁPSULA 02 // CULTO</span>
+                <span>PAG. 03</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s1RSub">EL FENÓMENO DEL COLECCIONISMO ATEMPORAL</span>
+                <h3 class="zine-page-title" data-i18n="zine.s1RTitle">La Ruptura de los 90s &amp; 2000s</h3>
+                <p class="zine-text" data-i18n="zine.s1RBody1">
+                  A finales de los 90 y principios de los 2000, creadores iconoclastas como <strong>Raf Simons</strong>, <strong>Helmut Lang</strong> y <strong>Martin Margiela</strong> transformaron la prenda de vestir en una reliquia de culto.
+                </p>
+                <p class="zine-text" data-i18n="zine.s1RBody2">
+                  La ropa dejó de ser un producto estacional de consumo rápido para convertirse en un objeto con valor histórico y atemporal. Vestir una pieza de archivo dejó de ser consumir moda: pasó a ser custodiar un fragmento de arte y rebelión.
+                </p>
+                <p class="zine-text" data-i18n="zine.s1RBody3">
+                  Hoy, el término <em>Archive</em> en <strong>silent.arch1ves</strong> es un juramento de permanencia. No fabricamos colecciones efímeras; construimos especímenes con peso, dignidad y valor duradero.
+                </p>
+                <div class="zine-stamp">
+                  <span>ATEMPORAL PRESTIGE CERTIFIED</span>
+                  <span>PARIS / TOKYO ARCHIVE</span>
+                </div>
+              </div>
+              <div class="zine-page-footer">
+                <span>ISSUE 001</span>
+                <span>@SILENT.ARCH1VES</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- SPREAD 02: SPECIMEN 001 — POR QUÉ LA CREAMOS & QUÉ SE SIENTE -->
+          <article class="zine-spread" data-spread="2">
+            <div class="zine-page zine-page-left">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s2PageLHeader">CÁPSULA 03 // GÉNESIS</span>
+                <span>PAG. 04</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s2LSub">LA PRIMERA PRENDA (ESPECÍMEN 001)</span>
+                <h3 class="zine-page-title" data-i18n="zine.s2LTitle">Por qué hemos hecho esta pieza</h3>
+                <p class="zine-text-lead" data-i18n="zine.s2LLead">
+                  Specimen 001 nace como un acto de impugnación directa contra la aceleración contemporánea y la delgadez miserable del fast-fashion.
+                </p>
+                <p class="zine-text" data-i18n="zine.s2LBody1">
+                  Rechazamos la camiseta como soporte publicitario. Esta pieza fue concebida como un artefacto arquitectónico: hilado denso de 320 GSM, paneles curvilíneos frontales que reproducen la anatomía torácica y costuras reforzadas que desafían el desgaste.
+                </p>
+                <p class="zine-text" data-i18n="zine.s2LBody2">
+                  La creamos porque necesitábamos una prenda que no pidiera disculpas, que no buscara ser aceptada en un feed de redes, y que devolviera al vestir el peso, la solemnidad y el silencio.
+                </p>
+              </div>
+              <div class="zine-page-footer">
+                <span>SPECIMEN SL-01</span>
+                <span>320 GSM DOUBLE-FACED</span>
+              </div>
+            </div>
+
+            <div class="zine-page zine-page-right">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s2PageRHeader">CÁPSULA 04 // HÁPTICA</span>
+                <span>PAG. 05</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s2RSub">LA EXPERIENCIA CORPORAL</span>
+                <h3 class="zine-page-title" data-i18n="zine.s2RTitle">Qué se siente al vestirla</h3>
+                <p class="zine-text-lead" data-i18n="zine.s2RLead">
+                  Al introducir los brazos y dejar que la tela repose sobre las clavículas, el cuerpo experimenta una alteración inmediata de gravedad.
+                </p>
+                <p class="zine-text" data-i18n="zine.s2RBody1">
+                  La densidad del algodón compacto ejerce una contención reconfortante, similar a una armadura textil que amortigua la sobreestimulación del entorno urbano. La postura se endereza de forma natural; los hombros se asientan, la mirada se serena.
+                </p>
+                <p class="zine-text" data-i18n="zine.s2RBody2">
+                  La cruz heráldica trasera en descarga de pigmento al carbón y el monograma gótico sutil no buscan exhibirse; son talismanes íntimos para quien comprende el lujo de desaparecer.
+                </p>
+                <div class="zine-quote-box">
+                  <p class="zine-quote" data-i18n="zine.s2RQuote">
+                    “No te vistes para ser contemplado por extraños. Te blindas para encontrarte contigo mismo.”
+                  </p>
+                </div>
+              </div>
+              <div class="zine-page-footer">
+                <span>TACTILE ARMOR SPEC</span>
+                <span>ANATOMICAL STRUCTURE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- SPREAD 03: EL RITUAL FÍSICO & EL ARCHIVO VELADO -->
+          <article class="zine-spread" data-spread="3">
+            <div class="zine-page zine-page-left">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s3PageLHeader">CÁPSULA 05 // UNBOXING RITUAL</span>
+                <span>PAG. 06</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s3LSub">LA PUBLICACIÓN FÍSICA DE ARCHIVO</span>
+                <h3 class="zine-page-title" data-i18n="zine.s3LTitle">El Tomo Impreso en tus Manos</h3>
+                <p class="zine-text-lead" data-i18n="zine.s3LLead">
+                  Esta muestra digital es solo el preludio. La obra completa existe como un objeto tangible de colección.
+                </p>
+                <p class="zine-text" data-i18n="zine.s3LBody1">
+                  El Tomo 001 completo consta de una monografía de 64 páginas encuadernada a mano con cosido Singer, impresa sobre papel Fedrigoni Sirio Black mate de 120 gramos con tintas plateadas y barnices al tacto.
+                </p>
+                <p class="zine-text" data-i18n="zine.s3LBody2">
+                  Cada ejemplar físico lleva su número de serie caligrafiado a mano por el taller, y se entrega sellado exclusivamente dentro del packaging de la primera prenda numerada.
+                </p>
+                <div class="zine-stamp">
+                  <span>FEDRIGONI MATTE PRINTED</span>
+                  <span>HAND-NUMBERED &amp; SEALED</span>
+                </div>
+              </div>
+              <div class="zine-page-footer">
+                <span>EDITION OF 24</span>
+                <span>PARIS ATELIER</span>
+              </div>
+            </div>
+
+            <div class="zine-page zine-page-right zine-page-redacted">
+              <div class="zine-page-header">
+                <span data-i18n="zine.s3PageRHeader">PÁGINAS 07 A 48 // VELADO</span>
+                <span>PAG. 07–48</span>
+              </div>
+              <div class="zine-page-inner">
+                <span class="zine-sub-title" data-i18n="zine.s3RSub">DOSSIER CONFIDENCIAL DE TALLER</span>
+                <h3 class="zine-page-title" data-i18n="zine.s3RTitle">Patrones &amp; Secretos Reservados</h3>
+                
+                <!-- Redacted censored text lines -->
+                <div class="redacted-container">
+                  <div class="redacted-line width-90"></div>
+                  <div class="redacted-line width-75"></div>
+                  <div class="redacted-line width-85"></div>
+                  <div class="redacted-line width-60"></div>
+                  <div class="redacted-line width-95"></div>
+                  <div class="redacted-line width-70"></div>
+                  <div class="redacted-line width-80"></div>
+                </div>
+
+                <div class="zine-lock-notice">
+                  <span class="lock-icon">🔒</span>
+                  <h4 data-i18n="zine.lockTitle">CONTENIDO CUSTODIADO EN CÁMARA ACORAZADA</h4>
+                  <p data-i18n="zine.lockDesc">
+                    Los patrones de confección, coordenadas exactas de telar y fotografías inéditas de campaña se encuentran selladas en la revista física dentro del packaging de la prenda.
+                  </p>
+                  <button id="zine-allocate-specimen-btn" class="zine-unlock-btn" data-i18n="zine.unlockBtn">
+                    ASIGNAR ESPECÍMEN 001 [DESBLOQUEAR REVISTA FÍSICA]
+                  </button>
+                </div>
+              </div>
+              <div class="zine-page-footer">
+                <span>ACCESS RESTRICTED</span>
+                <span>SILENT ARCH1VES</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
